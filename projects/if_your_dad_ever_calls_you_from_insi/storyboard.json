@@ -1,0 +1,448 @@
+{
+ "channel": "NIGHT FILES",
+ "file_num": "08",
+ "scenes": [
+  {
+   "id": "s01",
+   "word_start": 0,
+   "scene": "phone_call",
+   "rule_num": 0,
+   "title": "DAD",
+   "subtitle": "3:03 AM \u00b7 INSIDE HOUSE",
+   "danger": false,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s02",
+   "word_start": 14,
+   "scene": "room_doorway",
+   "rule_num": 0,
+   "normal_bubble": "Are you awake?",
+   "echo_bubble": "Are you awake?",
+   "danger": true,
+   "sfx": "click"
+  },
+  {
+   "id": "s03",
+   "word_start": 32,
+   "scene": "rule_card",
+   "rule_num": 1,
+   "title": "DO NOT HANG UP",
+   "sfx": "sting"
+  },
+  {
+   "id": "s04",
+   "word_start": 40,
+   "scene": "room_bed",
+   "rule_num": 0,
+   "danger": false
+  },
+  {
+   "id": "s05",
+   "word_start": 46,
+   "scene": "phone_call",
+   "rule_num": 0,
+   "title": "DAD",
+   "subtitle": "Inside House",
+   "danger": false,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s06",
+   "word_start": 56,
+   "scene": "room_couch",
+   "rule_num": 0,
+   "danger": false
+  },
+  {
+   "id": "s07",
+   "word_start": 64,
+   "scene": "phone_call",
+   "rule_num": 0,
+   "title": "Dad",
+   "subtitle": "Caller ID: Inside House",
+   "danger": true,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s08",
+   "word_start": 76,
+   "scene": "room_doorway",
+   "rule_num": 0,
+   "danger": true,
+   "sfx": "click"
+  },
+  {
+   "id": "s09",
+   "word_start": 84,
+   "scene": "phone_call",
+   "rule_num": 0,
+   "title": "CALL ENDED",
+   "danger": true
+  },
+  {
+   "id": "s10",
+   "word_start": 91,
+   "scene": "room_doorway",
+   "rule_num": 0,
+   "danger": true,
+   "sfx": "thump"
+  },
+  {
+   "id": "s11",
+   "word_start": 100,
+   "scene": "big_word",
+   "rule_num": 0,
+   "title": "DISTORTED",
+   "danger": true
+  },
+  {
+   "id": "s12",
+   "word_start": 108,
+   "scene": "big_word",
+   "rule_num": 0,
+   "title": "MISTAKE",
+   "danger": true,
+   "sfx": "sting"
+  },
+  {
+   "id": "s13",
+   "word_start": 115,
+   "scene": "rule_card",
+   "rule_num": 0,
+   "title": "SEVEN RULES",
+   "subtitle": "YOUR SURVIVAL GUIDE"
+  },
+  {
+   "id": "s14",
+   "word_start": 128,
+   "scene": "rule_card",
+   "rule_num": 1,
+   "title": "ANSWER IT",
+   "sfx": "sting"
+  },
+  {
+   "id": "s15",
+   "word_start": 139,
+   "scene": "room_bed",
+   "rule_num": 1,
+   "danger": false
+  },
+  {
+   "id": "s16",
+   "word_start": 147,
+   "scene": "phone_call",
+   "rule_num": 1,
+   "title": "TESTING",
+   "danger": true
+  },
+  {
+   "id": "s17",
+   "word_start": 158,
+   "scene": "room_doorway",
+   "rule_num": 1,
+   "danger": true,
+   "sfx": "click"
+  },
+  {
+   "id": "s18",
+   "word_start": 169,
+   "scene": "phone_call",
+   "rule_num": 1,
+   "title": "ANSWER IT",
+   "danger": true,
+   "sfx": "beep"
+  },
+  {
+   "id": "s19",
+   "word_start": 178,
+   "scene": "rule_card",
+   "rule_num": 2,
+   "title": "DO NOT HANG UP",
+   "sfx": "sting"
+  },
+  {
+   "id": "s20",
+   "word_start": 185,
+   "scene": "phone_call",
+   "rule_num": 2,
+   "danger": true
+  },
+  {
+   "id": "s21",
+   "word_start": 196,
+   "scene": "big_word",
+   "rule_num": 2,
+   "title": "TETHER",
+   "danger": true
+  },
+  {
+   "id": "s22",
+   "word_start": 207,
+   "scene": "phone_call",
+   "rule_num": 2,
+   "title": "DAD - IN YOUR ROOM",
+   "danger": true,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s23",
+   "word_start": 218,
+   "scene": "entity_grin",
+   "rule_num": 2,
+   "danger": true
+  },
+  {
+   "id": "s24",
+   "word_start": 226,
+   "scene": "phone_call",
+   "rule_num": 2,
+   "title": "KEEP THE LINE OPEN",
+   "danger": true,
+   "sfx": "beep"
+  },
+  {
+   "id": "s25",
+   "word_start": 234,
+   "scene": "rule_card",
+   "rule_num": 3,
+   "title": "DO NOT SPEAK FIRST",
+   "sfx": "sting"
+  },
+  {
+   "id": "s26",
+   "word_start": 242,
+   "scene": "room_bed",
+   "rule_num": 3,
+   "danger": false
+  },
+  {
+   "id": "s27",
+   "word_start": 252,
+   "scene": "entity_grin",
+   "rule_num": 3,
+   "danger": true
+  },
+  {
+   "id": "s28",
+   "word_start": 263,
+   "scene": "phone_call",
+   "rule_num": 3,
+   "title": "PERSONAL QUESTIONS",
+   "danger": true
+  },
+  {
+   "id": "s29",
+   "word_start": 272,
+   "scene": "phone_call",
+   "rule_num": 3,
+   "title": "WAIT FOR IT TO SPEAK",
+   "danger": true,
+   "sfx": "beep"
+  },
+  {
+   "id": "s30",
+   "word_start": 280,
+   "scene": "rule_card",
+   "rule_num": 4,
+   "title": "DO NOT LET IT SPEAK FOR MORE THAN TEN SECONDS",
+   "sfx": "sting"
+  },
+  {
+   "id": "s31",
+   "word_start": 289,
+   "scene": "phone_call",
+   "rule_num": 4,
+   "danger": true
+  },
+  {
+   "id": "s32",
+   "word_start": 298,
+   "scene": "big_word",
+   "rule_num": 4,
+   "title": "FEEDING",
+   "danger": true
+  },
+  {
+   "id": "s33",
+   "word_start": 308,
+   "scene": "room_bed",
+   "rule_num": 4,
+   "danger": true
+  },
+  {
+   "id": "s34",
+   "word_start": 319,
+   "scene": "phone_clock",
+   "rule_num": 4,
+   "title": "00:09",
+   "danger": true,
+   "sfx": "beep"
+  },
+  {
+   "id": "s35",
+   "word_start": 328,
+   "scene": "rule_card",
+   "rule_num": 5,
+   "title": "INTERRUPT IT WITH A QUESTION ABOUT YOUR CHILDHOOD",
+   "sfx": "sting"
+  },
+  {
+   "id": "s36",
+   "word_start": 337,
+   "scene": "room_bed",
+   "rule_num": 5,
+   "danger": true
+  },
+  {
+   "id": "s37",
+   "word_start": 346,
+   "scene": "big_word",
+   "rule_num": 5,
+   "title": "VULNERABLE",
+   "danger": true
+  },
+  {
+   "id": "s38",
+   "word_start": 357,
+   "scene": "entity_grin",
+   "rule_num": 5,
+   "danger": true
+  },
+  {
+   "id": "s39",
+   "word_start": 369,
+   "scene": "phone_call",
+   "rule_num": 5,
+   "title": "I REMEMBER",
+   "danger": false
+  },
+  {
+   "id": "s40",
+   "word_start": 379,
+   "scene": "phone_call",
+   "rule_num": 5,
+   "title": "A REAL VOICE",
+   "danger": false,
+   "sfx": "beep"
+  },
+  {
+   "id": "s41",
+   "word_start": 387,
+   "scene": "rule_card",
+   "rule_num": 6,
+   "title": "IF IT ANSWERS CORRECTLY, ASK IT TO HUM YOUR LULLABY",
+   "sfx": "sting"
+  },
+  {
+   "id": "s42",
+   "word_start": 395,
+   "scene": "room_bed",
+   "rule_num": 6,
+   "danger": false
+  },
+  {
+   "id": "s43",
+   "word_start": 404,
+   "scene": "big_word",
+   "rule_num": 6,
+   "title": "TRICK",
+   "danger": true
+  },
+  {
+   "id": "s44",
+   "word_start": 415,
+   "scene": "phone_call",
+   "rule_num": 6,
+   "title": "SICKENING CRUNCH",
+   "danger": true,
+   "sfx": "click"
+  },
+  {
+   "id": "s45",
+   "word_start": 426,
+   "scene": "phone_call",
+   "rule_num": 6,
+   "title": "STATIC",
+   "danger": true,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s46",
+   "word_start": 435,
+   "scene": "big_word",
+   "rule_num": 6,
+   "title": "YOUR CHANCE",
+   "danger": false,
+   "sfx": "beep"
+  },
+  {
+   "id": "s47",
+   "word_start": 443,
+   "scene": "rule_card",
+   "rule_num": 7,
+   "title": "WHEN IT FAILS TO HUM THE LULLABY, HANG UP AND THROW YOUR PHONE OUT THE WINDOW",
+   "sfx": "sting"
+  },
+  {
+   "id": "s48",
+   "word_start": 451,
+   "scene": "room_bed",
+   "rule_num": 7,
+   "danger": false
+  },
+  {
+   "id": "s49",
+   "word_start": 460,
+   "scene": "big_word",
+   "rule_num": 7,
+   "title": "CONDUIT",
+   "danger": true
+  },
+  {
+   "id": "s50",
+   "word_start": 470,
+   "scene": "room_doorway",
+   "rule_num": 7,
+   "danger": true,
+   "sfx": "click"
+  },
+  {
+   "id": "s51",
+   "word_start": 481,
+   "scene": "entity_grin",
+   "rule_num": 7,
+   "danger": true
+  },
+  {
+   "id": "s52",
+   "word_start": 492,
+   "scene": "big_word",
+   "rule_num": 7,
+   "title": "READY",
+   "danger": true,
+   "sfx": "sting"
+  },
+  {
+   "id": "s53",
+   "word_start": 501,
+   "scene": "room_bed",
+   "rule_num": 7,
+   "danger": true
+  },
+  {
+   "id": "s54",
+   "word_start": 511,
+   "scene": "room_doorway",
+   "rule_num": 7,
+   "danger": true
+  },
+  {
+   "id": "s55",
+   "word_start": 521,
+   "scene": "room_couch",
+   "rule_num": 7,
+   "danger": true
+  }
+ ]
+}
