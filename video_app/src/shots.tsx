@@ -57,6 +57,6 @@ const SFX_MAP: Record<string, string> = {
 
 export const CUES: Cue[] = timedScenes
   .filter((x) => x.spec.sfx && SFX_MAP[x.spec.sfx])
-  .map((x) => ({ t: x.t, src: SFX_MAP[x.spec.sfx!], vol: 0.45 }));
+.map((x) => ({ at: x.t, file: SFX_MAP[x.spec.sfx!], vol: 0.45 }));
 
 export const DROPOUTS: Dropout[] = [];
