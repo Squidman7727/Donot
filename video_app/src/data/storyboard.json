@@ -1,0 +1,7 @@
+{
+ "channel": "NIGHT FILES",
+ "file_num": "01",
+ "scenes": [
+  {"id": "s01", "word_start": 0, "scene": "phone_call", "rule_num": 0, "title": "DAD", "subtitle": "3:03 AM · INSIDE HOUSE", "sfx": "buzz"}
+ ]
+}
