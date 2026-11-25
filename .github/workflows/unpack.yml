@@ -1,0 +1,20 @@
+name: Unpack Style 5 Bot
+on:
+  push:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          if [ -f rules_horror_style5_bot.zip ]; then
+            unzip -o rules_horror_style5_bot.zip
+            rm -f rules_horror_style5_bot.zip
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git add -A
+            git commit -m "Unpack Style 5 Rules Horror Bot"
+            git push
+          fi
