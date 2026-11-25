@@ -181,7 +181,7 @@ def tts_elevenlabs(text: str, mode: str, api_key: str) -> np.ndarray:
 
 def tts_gemini(text: str, mode: str, api_key: str, lang: str = "en") -> np.ndarray:
     voice_name = os.environ.get("GEMINI_TTS_VOICE", "Charon")  # Deep, calm, warm thriller storyteller
-    models = ["gemini-2.5-flash-preview-tts", "gemini-3.1-flash-tts-preview"]
+    models = ["gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]
 
     if mode == "whisper":
         direction = (

@@ -11,8 +11,14 @@ import json
 import requests
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
-PRIMARY_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-FALLBACK_MODELS = [PRIMARY_MODEL, "gemini-2.5-flash", "gemini-2.5-pro"]
+PRIMARY_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
+FALLBACK_MODELS = [
+    PRIMARY_MODEL,
+    "gemini-3.8-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash",
+    "gemini-2.5-flash",
+]
 
 SCENES = [
     "house_cutaway",
@@ -37,7 +43,6 @@ SCENES = [
     "callback_text",
 ]
 
-# Complementary fallback angles so two identical scene types never appear back-to-back
 ALT_ANGLE = {
     "house_cutaway": "bedroom_view",
     "bedroom_view": "face_kid",
@@ -62,10 +67,32 @@ ALT_ANGLE = {
 }
 
 
+def _discover_text_models() -> list:
+    """Auto-discovers live Gemini text models on the user's API key if defaults 404."""
+    try:
+        r = requests.get(
+            "https://generativelanguage.googleapis.com/v1beta/models",
+            headers={"x-goog-api-key": GEMINI_API_KEY},
+            timeout=20,
+        )
+        r.raise_for_status()
+        found = []
+        for m in r.json().get("models", []):
+            name = m.get("name", "").replace("models/", "")
+            methods = m.get("supportedGenerationMethods", [])
+            if "generateContent" in methods and "gemini" in name and "tts" not in name and "embedding" not in name:
+                found.append(name)
+        # Prefer flash models first
+        found.sort(key=lambda x: (0 if "flash" in x else 1, x), reverse=False)
+        return found[:5]
+    except Exception:
+        return []
+
+
 def _call_gemini(model: str, system_prompt: str, user_prompt: str) -> str:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
-    gen_cfg = {"temperature": 0.78, "maxOutputTokens": 32768}
+    gen_cfg = {"temperature": 0.78, "maxOutputTokens": 24576}
     if model.startswith("gemini-3"):
         gen_cfg["thinkingConfig"] = {"thinkingLevel": "low"}
     elif model.startswith("gemini-2.5"):
@@ -99,7 +126,6 @@ def _enforce_no_repeats(scenes: list) -> list:
         st = sc.get("scene", "house_cutaway")
         if st not in SCENES:
             st = "house_cutaway"
-        # Never repeat the exact same scene type back-to-back (except intentional rule cards)
         if st == prev_type:
             cand = ALT_ANGLE.get(st, "face_kid")
             if cand == prev_type or cand in recent[-2:]:
@@ -118,7 +144,6 @@ def _enforce_no_repeats(scenes: list) -> list:
 
 def generate_style5_package(topic: str, minutes: float, lang: str = "en"):
     target_words = max(160, int(round(minutes * 150)))
-    # Fast-paced Nightora rhythm: ~22-24 visual cuts per minute (~2.5 seconds per shot)
     target_scenes = max(20, int(round(minutes * 23)))
     lang_label = (
         "Hindi (Devanagari, natural spoken Hindi keeping common English words like phone, rule, door)"
@@ -198,9 +223,13 @@ OUTPUT FORMAT (STRICT — use these exact 3 markers):
         f"Remember: every scene needs an exact chronological `cue` (3-5 words copied verbatim from ===SCRIPT===) and NO consecutive duplicate scene types."
     )
 
+    tried = []
+    candidates = list(dict.fromkeys(FALLBACK_MODELS))
     last_err = None
     raw = None
-    for model in FALLBACK_MODELS:
+
+    for model in candidates:
+        tried.append(model)
         try:
             raw = _call_gemini(model, system_prompt, user_prompt)
             if "===SCRIPT===" in raw and "===STORYBOARD_JSON===" in raw:
@@ -208,6 +237,20 @@ OUTPUT FORMAT (STRICT — use these exact 3 markers):
         except Exception as e:
             last_err = e
             continue
+
+    # If hardcoded models all failed (e.g. 404), auto-discover live models on this API key
+    if not raw or "===SCRIPT===" not in raw:
+        for model in _discover_text_models():
+            if model in tried:
+                continue
+            try:
+                raw = _call_gemini(model, system_prompt, user_prompt)
+                if "===SCRIPT===" in raw and "===STORYBOARD_JSON===" in raw:
+                    break
+            except Exception as e:
+                last_err = e
+                continue
+
     if not raw or "===SCRIPT===" not in raw:
         raise RuntimeError(f"Gemini generation failed: {last_err}")
 
