@@ -1,9 +1,9 @@
-"""Generates free edge-tts voiceover (English or Hindi), exact words.json, dark ambient drone bed,
-and domestic horror SFX (buzz, click, sting, beep) inside video_app/public/ and video_app/src/data/.
+"""Generates free edge-tts voiceover (English or Hindi), exact words.json ([start, end, word] tuples),
+dark ambient drone bed, and domestic horror SFX inside video_app/public/ and video_app/src/data/.
 Usage:
   python3 scripts/build_audio.py projects/<slug>/script.txt [--lang en|hi]
 """
-import asyncio, json, math, os, re, subprocess, sys, time
+import asyncio, json, os, re, subprocess, sys, time
 import numpy as np
 import edge_tts
 
@@ -22,7 +22,6 @@ def write_wav(path, arr):
 
 
 def make_sfx_and_bed(dur_sec: float):
-    # 1) Quiet dark ambient horror drone bed
     t = np.linspace(0, dur_sec + 3.0, int((dur_sec + 3.0) * SR), dtype=np.float32)
     bed = (
         0.35 * np.sin(2 * np.pi * 55.0 * t)
@@ -32,22 +31,18 @@ def make_sfx_and_bed(dur_sec: float):
     ) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.07 * t))
     write_wav(os.path.join(PUB, "bed.wav"), bed * 0.35)
 
-    # 2) Phone buzz (0.55s)
     tb = np.linspace(0, 0.55, int(0.55 * SR), dtype=np.float32)
     buzz = np.sin(2 * np.pi * 145 * tb) * (0.5 + 0.5 * np.sin(2 * np.pi * 24 * tb)) * np.exp(-tb * 2.5)
     write_wav(os.path.join(PUB, "sfx_buzz.wav"), buzz * 0.65)
 
-    # 3) Door click (0.18s)
     tc = np.linspace(0, 0.18, int(0.18 * SR), dtype=np.float32)
     click = np.random.default_rng(7).normal(0, 1, len(tc)).astype(np.float32) * np.exp(-tc * 45)
     write_wav(os.path.join(PUB, "sfx_click.wav"), click * 0.8)
 
-    # 4) Low horror sting (1.2s)
     ts = np.linspace(0, 1.2, int(1.2 * SR), dtype=np.float32)
     sting = (np.sin(2 * np.pi * 65 * ts) + 0.6 * np.sin(2 * np.pi * 92 * ts)) * np.exp(-ts * 2.6)
     write_wav(os.path.join(PUB, "sfx_sting.wav"), sting * 0.75)
 
-    # 5) Alarm/phone beep (0.28s)
     tp = np.linspace(0, 0.28, int(0.28 * SR), dtype=np.float32)
     beep = np.sin(2 * np.pi * 1180 * tp) * np.exp(-tp * 6)
     write_wav(os.path.join(PUB, "sfx_beep.wav"), beep * 0.5)
@@ -77,10 +72,9 @@ def main():
         lang = sys.argv[sys.argv.index("--lang") + 1].lower()
 
     voice = "hi-IN-MadhurNeural" if lang.startswith("hi") else "en-US-AndrewNeural"
-    rate = "-4%" if lang.startswith("en") else "+0%"  # calm, intimate creepy pace
+    rate = "-4%" if lang.startswith("en") else "+0%"
 
     raw_text = open(script_path, encoding="utf-8").read()
-    # Strip markdown headers and [emotion] tags for TTS
     clean_lines = []
     for line in raw_text.splitlines():
         l = line.strip()
@@ -90,7 +84,6 @@ def main():
         if l:
             clean_lines.append(l)
 
-    # Group into ~35-word chunks so edge-tts stays rock-solid even on 15-minute scripts
     chunks_txt = []
     buf = []
     for l in clean_lines:
@@ -127,11 +120,12 @@ def main():
         lead_s = lead / SR
         dur_s = len(a) / SR
         for st, en, tx in wb:
-            words_out.append({
-                "word": tx,
-                "start": round(max(0.0, st - lead_s) + t, 3),
-                "end": round(min(dur_s, en - lead_s) + t, 3),
-            })
+            # Exact [start, end, word] tuple expected by Remotion kit/timing.ts
+            words_out.append([
+                round(max(0.0, st - lead_s) + t, 3),
+                round(min(dur_s, en - lead_s) + t, 3),
+                tx,
+            ])
         audio_parts.append(a)
         t += dur_s
         if k < len(chunks_txt) - 1:
