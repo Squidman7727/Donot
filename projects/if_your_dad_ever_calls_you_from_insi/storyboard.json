@@ -7,1130 +7,532 @@
    "word_start": 0,
    "scene": "room_bed",
    "rule_num": 0,
-   "title": "SLEEPING",
-   "subtitle": "3:03 AM \u00b7 INSIDE HOUSE",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s02",
-   "word_start": 4,
-   "scene": "phone_call",
-   "rule_num": 0,
    "title": "DAD",
    "subtitle": "3:03 AM \u00b7 INSIDE HOUSE",
-   "danger": true,
+   "danger": false,
    "sfx": "buzz"
   },
   {
-   "id": "s03",
-   "word_start": 23,
-   "scene": "room_doorway",
+   "id": "s02",
+   "word_start": 14,
+   "scene": "phone_call",
    "rule_num": 0,
-   "normal_bubble": "He's in his bed.",
-   "echo_bubble": "He's in his bed.",
+   "normal_bubble": "Are you awake?",
+   "echo_bubble": "Are you awake?",
    "danger": true,
-   "sfx": "none"
+   "sfx": "click"
+  },
+  {
+   "id": "s03",
+   "word_start": 32,
+   "scene": "big_word",
+   "rule_num": 0,
+   "title": "DO NOT HANG UP",
+   "sfx": "sting"
   },
   {
    "id": "s04",
-   "word_start": 32,
-   "scene": "rule_card",
+   "word_start": 38,
+   "scene": "big_word",
    "rule_num": 0,
-   "title": "ANSWER IT",
+   "title": "DO NOT IGNORE IT",
    "sfx": "sting"
   },
   {
    "id": "s05",
-   "word_start": 36,
-   "scene": "big_word",
-   "rule_num": 0,
-   "title": "DO NOT IGNORE IT",
-   "sfx": "none"
-  },
-  {
-   "id": "s06",
-   "word_start": 40,
-   "scene": "big_word",
-   "rule_num": 0,
-   "title": "DO NOT MUTE IT",
-   "sfx": "none"
-  },
-  {
-   "id": "s07",
    "word_start": 44,
    "scene": "big_word",
    "rule_num": 0,
-   "title": "DO NOT GO",
-   "sfx": "none"
-  },
-  {
-   "id": "s08",
-   "word_start": 57,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Not a butt dial.",
-   "echo_bubble": "Not a butt dial.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s09",
-   "word_start": 60,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Not a prank.",
-   "echo_bubble": "Not a prank.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s10",
-   "word_start": 63,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Not a noise.",
-   "echo_bubble": "Not a noise.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s11",
-   "word_start": 70,
-   "scene": "room_bed",
-   "rule_num": 0,
-   "title": "YOU'RE IN YOUR ROOM",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s12",
-   "word_start": 76,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "title": "DAD",
-   "subtitle": "3:03 AM",
-   "danger": true,
-   "sfx": "buzz"
-  },
-  {
-   "id": "s13",
-   "word_start": 82,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Hello?",
-   "echo_bubble": "Hello?",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s14",
-   "word_start": 94,
-   "scene": "room_doorway",
-   "rule_num": 0,
-   "normal_bubble": "He's *here*.",
-   "echo_bubble": "He's *here*.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s15",
-   "word_start": 100,
-   "scene": "room_bed",
-   "rule_num": 0,
-   "normal_bubble": "He's calling.",
-   "echo_bubble": "He's calling.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s16",
-   "word_start": 104,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Whisper his name.",
-   "echo_bubble": "No answer.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s17",
-   "word_start": 109,
-   "scene": "room_doorway",
-   "rule_num": 0,
-   "normal_bubble": "His door is locked.",
-   "echo_bubble": "From the inside.",
-   "danger": true,
-   "sfx": "click"
-  },
-  {
-   "id": "s18",
-   "word_start": 116,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "A faint click.",
-   "echo_bubble": "A subtle shift.",
-   "danger": true,
-   "sfx": "click"
-  },
-  {
-   "id": "s19",
-   "word_start": 123,
-   "scene": "rule_card",
-   "rule_num": 0,
-   "title": "SEVEN RULES",
+   "title": "DO NOT FIND HIM",
    "sfx": "sting"
   },
   {
-   "id": "s20",
-   "word_start": 132,
+   "id": "s06",
+   "word_start": 57,
+   "scene": "room_bed",
+   "rule_num": 0,
+   "danger": false
+  },
+  {
+   "id": "s07",
+   "word_start": 62,
+   "scene": "phone_call",
+   "rule_num": 0,
+   "normal_bubble": "Dad",
+   "echo_bubble": "Dad",
+   "danger": false
+  },
+  {
+   "id": "s08",
+   "word_start": 72,
+   "scene": "phone_text",
+   "rule_num": 0,
+   "normal_bubble": "Inside House",
+   "echo_bubble": "Living Room",
+   "danger": true
+  },
+  {
+   "id": "s09",
+   "word_start": 84,
+   "scene": "room_doorway",
+   "rule_num": 0,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s10",
+   "word_start": 98,
+   "scene": "big_word",
+   "rule_num": 0,
+   "title": "DEAD",
+   "sfx": "sting"
+  },
+  {
+   "id": "s11",
+   "word_start": 105,
+   "scene": "room_doorway",
+   "rule_num": 0,
+   "danger": true
+  },
+  {
+   "id": "s12",
+   "word_start": 110,
+   "scene": "room_bed",
+   "rule_num": 0,
+   "danger": true
+  },
+  {
+   "id": "s13",
+   "word_start": 121,
    "scene": "rule_card",
    "rule_num": 1,
    "title": "DO NOT HANG UP",
    "sfx": "sting"
   },
   {
-   "id": "s21",
-   "word_start": 135,
+   "id": "s14",
+   "word_start": 130,
    "scene": "phone_call",
    "rule_num": 1,
-   "normal_bubble": "You'll want to.",
-   "echo_bubble": "Scream to end it.",
-   "danger": true,
-   "sfx": "none"
+   "danger": true
+  },
+  {
+   "id": "s15",
+   "word_start": 136,
+   "scene": "big_word",
+   "rule_num": 1,
+   "title": "GLITCH?",
+   "sfx": "beep"
+  },
+  {
+   "id": "s16",
+   "word_start": 145,
+   "scene": "room_bed",
+   "rule_num": 1,
+   "danger": true
+  },
+  {
+   "id": "s17",
+   "word_start": 154,
+   "scene": "room_doorway",
+   "rule_num": 1,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s18",
+   "word_start": 165,
+   "scene": "phone_call",
+   "rule_num": 1,
+   "normal_bubble": "...",
+   "echo_bubble": "...",
+   "danger": false
+  },
+  {
+   "id": "s19",
+   "word_start": 170,
+   "scene": "rule_card",
+   "rule_num": 2,
+   "title": "DO NOT IGNORE IT",
+   "sfx": "sting"
+  },
+  {
+   "id": "s20",
+   "word_start": 178,
+   "scene": "room_bed",
+   "rule_num": 2,
+   "normal_bubble": "Let it ring.",
+   "echo_bubble": "It'll stop.",
+   "danger": true
+  },
+  {
+   "id": "s21",
+   "word_start": 185,
+   "scene": "room_doorway",
+   "rule_num": 2,
+   "sfx": "click"
   },
   {
    "id": "s22",
-   "word_start": 145,
+   "word_start": 191,
    "scene": "room_doorway",
-   "rule_num": 1,
-   "normal_bubble": "It wants that.",
-   "echo_bubble": "Broken connection.",
-   "danger": true,
-   "sfx": "none"
+   "rule_num": 2,
+   "sfx": "click"
   },
   {
    "id": "s23",
-   "word_start": 150,
+   "word_start": 197,
    "scene": "room_doorway",
-   "rule_num": 1,
-   "normal_bubble": "Your door will click.",
-   "echo_bubble": "Lights flicker out.",
-   "danger": true,
+   "rule_num": 2,
    "sfx": "click"
   },
   {
    "id": "s24",
-   "word_start": 159,
-   "scene": "big_word",
-   "rule_num": 1,
-   "title": "WET DRAGGING",
-   "sfx": "none"
+   "word_start": 203,
+   "scene": "room_doorway",
+   "rule_num": 2,
+   "sfx": "click"
   },
   {
    "id": "s25",
-   "word_start": 165,
-   "scene": "big_word",
-   "rule_num": 1,
-   "title": "SILENCE IS WORST",
-   "sfx": "none"
+   "word_start": 210,
+   "scene": "phone_call",
+   "rule_num": 2,
+   "danger": false
   },
   {
    "id": "s26",
-   "word_start": 175,
-   "scene": "phone_call",
-   "rule_num": 1,
-   "normal_bubble": "Clara Hung up.",
-   "echo_bubble": "Phone on floor.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 215,
+   "scene": "rule_card",
+   "rule_num": 3,
+   "title": "DO NOT MUTE YOUR PHONE",
+   "sfx": "sting"
   },
   {
    "id": "s27",
-   "word_start": 181,
-   "scene": "room_bed",
-   "rule_num": 1,
-   "normal_bubble": "Bed empty.",
-   "echo_bubble": "Parents heard drag.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 223,
+   "scene": "phone_call",
+   "rule_num": 3,
+   "normal_bubble": "Mute",
+   "echo_bubble": "Silence",
+   "danger": true
   },
   {
    "id": "s28",
-   "word_start": 188,
-   "scene": "phone_call",
-   "rule_num": 1,
-   "normal_bubble": "Keep that line open.",
-   "echo_bubble": "No matter what.",
-   "danger": false,
-   "sfx": "none"
+   "word_start": 230,
+   "scene": "room_bed",
+   "rule_num": 3,
+   "danger": true
   },
   {
    "id": "s29",
-   "word_start": 195,
-   "scene": "rule_card",
-   "rule_num": 2,
-   "title": "DO NOT SPEAK HIS NAME",
-   "sfx": "sting"
+   "word_start": 236,
+   "scene": "room_doorway",
+   "rule_num": 3,
+   "sfx": "buzz"
   },
   {
    "id": "s30",
-   "word_start": 198,
-   "scene": "phone_call",
-   "rule_num": 2,
-   "normal_bubble": "You\u2019ll be tempted.",
-   "echo_bubble": "Confirm it's him.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 242,
+   "scene": "room_bed",
+   "rule_num": 3,
+   "sfx": "buzz"
   },
   {
    "id": "s31",
-   "word_start": 204,
-   "scene": "entity_grin",
-   "rule_num": 2,
-   "normal_bubble": "Not your dad.",
-   "echo_bubble": "A mimic.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 248,
+   "scene": "room_doorway",
+   "rule_num": 3,
+   "sfx": "buzz"
   },
   {
    "id": "s32",
-   "word_start": 210,
+   "word_start": 254,
    "scene": "entity_grin",
-   "rule_num": 2,
-   "normal_bubble": "Learns from your house.",
-   "echo_bubble": "From him.",
+   "rule_num": 3,
    "danger": true,
-   "sfx": "none"
+   "sfx": "buzz"
   },
   {
    "id": "s33",
-   "word_start": 216,
-   "scene": "big_word",
-   "rule_num": 2,
-   "title": "GIVES IT POWER",
-   "sfx": "none"
+   "word_start": 259,
+   "scene": "phone_call",
+   "rule_num": 3,
+   "danger": false
   },
   {
    "id": "s34",
-   "word_start": 220,
-   "scene": "entity_grin",
-   "rule_num": 2,
-   "normal_bubble": "Twist his words.",
-   "echo_bubble": "His fears. His love.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s35",
-   "word_start": 229,
-   "scene": "phone_call",
-   "rule_num": 2,
-   "normal_bubble": "Voice changes.",
-   "echo_bubble": "Becomes sweeter.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s36",
-   "word_start": 236,
-   "scene": "phone_call",
-   "rule_num": 2,
-   "normal_bubble": "John uttered his name.",
-   "echo_bubble": "Voice shifted.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s37",
-   "word_start": 242,
-   "scene": "phone_call",
-   "rule_num": 2,
-   "normal_bubble": "Oh, John. My boy.",
-   "echo_bubble": "Come here. I'm scared.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s38",
-   "word_start": 250,
-   "scene": "room_doorway",
-   "rule_num": 2,
-   "normal_bubble": "John opened his door.",
-   "echo_bubble": "Don't speak his name.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s39",
-   "word_start": 258,
+   "word_start": 264,
    "scene": "rule_card",
-   "rule_num": 3,
-   "title": "DO NOT ENTER HALLWAY",
+   "rule_num": 4,
+   "title": "DO NOT TEXT BACK",
    "sfx": "sting"
   },
   {
-   "id": "s40",
-   "word_start": 261,
+   "id": "s35",
+   "word_start": 272,
+   "scene": "phone_text",
+   "rule_num": 4,
+   "normal_bubble": "Are you okay?",
+   "echo_bubble": "Where are you?",
+   "danger": true
+  },
+  {
+   "id": "s36",
+   "word_start": 281,
+   "scene": "phone_text",
+   "rule_num": 4,
+   "normal_bubble": "Symbols",
+   "echo_bubble": "Glitches",
+   "danger": true
+  },
+  {
+   "id": "s37",
+   "word_start": 290,
+   "scene": "phone_text",
+   "rule_num": 4,
+   "normal_bubble": "Locked",
+   "echo_bubble": "...",
+   "danger": true
+  },
+  {
+   "id": "s38",
+   "word_start": 296,
    "scene": "room_doorway",
-   "rule_num": 3,
-   "normal_bubble": "You\u2019ll hear things.",
-   "echo_bubble": "Soft whispers.",
-   "danger": true,
-   "sfx": "none"
+   "rule_num": 4,
+   "sfx": "buzz"
+  },
+  {
+   "id": "s39",
+   "word_start": 301,
+   "scene": "phone_call",
+   "rule_num": 4,
+   "danger": false
+  },
+  {
+   "id": "s40",
+   "word_start": 306,
+   "scene": "rule_card",
+   "rule_num": 5,
+   "title": "DO NOT TRY TO FIND HIM",
+   "sfx": "sting"
   },
   {
    "id": "s41",
-   "word_start": 265,
+   "word_start": 315,
    "scene": "room_doorway",
-   "rule_num": 3,
-   "normal_bubble": "Faint footsteps.",
-   "echo_bubble": "Creak of floorboards.",
-   "danger": true,
-   "sfx": "none"
+   "rule_num": 5,
+   "danger": true
   },
   {
    "id": "s42",
-   "word_start": 272,
-   "scene": "big_word",
-   "rule_num": 3,
-   "title": "ITS DOMAIN",
-   "sfx": "none"
+   "word_start": 321,
+   "scene": "room_doorway",
+   "rule_num": 5,
+   "danger": true
   },
   {
    "id": "s43",
-   "word_start": 275,
-   "scene": "room_doorway",
-   "rule_num": 3,
-   "normal_bubble": "You become visible.",
-   "echo_bubble": "You become prey.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 326,
+   "scene": "entity_grin",
+   "rule_num": 5,
+   "danger": true
   },
   {
    "id": "s44",
-   "word_start": 283,
-   "scene": "phone_call",
-   "rule_num": 3,
-   "normal_bubble": "Whispers clearer.",
-   "echo_bubble": "Call your name.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 333,
+   "scene": "room_doorway",
+   "rule_num": 5,
+   "danger": true
   },
   {
    "id": "s45",
-   "word_start": 288,
-   "scene": "phone_call",
-   "rule_num": 3,
-   "normal_bubble": "Plead. Cry.",
-   "echo_bubble": "Air gets cold.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 340,
+   "scene": "room_bed",
+   "rule_num": 5,
+   "normal_bubble": "Lock door",
+   "echo_bubble": "Stay",
+   "danger": false
   },
   {
    "id": "s46",
-   "word_start": 296,
-   "scene": "room_doorway",
-   "rule_num": 3,
-   "normal_bubble": "Shadows deepen.",
-   "echo_bubble": "Something moves.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 345,
+   "scene": "rule_card",
+   "rule_num": 6,
+   "title": "DO NOT SPEAK",
+   "sfx": "sting"
   },
   {
    "id": "s47",
-   "word_start": 303,
-   "scene": "room_doorway",
-   "rule_num": 3,
-   "normal_bubble": "Emily opened door.",
-   "echo_bubble": "Just a crack.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 353,
+   "scene": "phone_call",
+   "rule_num": 6,
+   "normal_bubble": "Dad?",
+   "echo_bubble": "Hello?",
+   "danger": true
   },
   {
    "id": "s48",
-   "word_start": 308,
-   "scene": "entity_grin",
-   "rule_num": 3,
-   "normal_bubble": "A hand shot out.",
-   "echo_bubble": "Pulled her phone.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 359,
+   "scene": "big_word",
+   "rule_num": 6,
+   "title": "SILENCE",
+   "sfx": "sting"
   },
   {
    "id": "s49",
-   "word_start": 315,
-   "scene": "phone_call",
-   "rule_num": 3,
-   "normal_bubble": "Call ended.",
-   "echo_bubble": "Screams followed.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 365,
+   "scene": "entity_grin",
+   "rule_num": 6,
+   "danger": true
   },
   {
    "id": "s50",
-   "word_start": 320,
-   "scene": "room_doorway",
-   "rule_num": 3,
-   "normal_bubble": "Don't step into hallway.",
-   "echo_bubble": "Stay in your room.",
-   "danger": false,
-   "sfx": "none"
+   "word_start": 372,
+   "scene": "phone_call",
+   "rule_num": 6,
+   "danger": false
   },
   {
    "id": "s51",
-   "word_start": 327,
+   "word_start": 377,
    "scene": "rule_card",
-   "rule_num": 4,
-   "title": "DO NOT CLOSE YOUR EYES",
+   "rule_num": 7,
+   "title": "PLAY DEAD",
    "sfx": "sting"
   },
   {
    "id": "s52",
-   "word_start": 330,
-   "scene": "room_bed",
-   "rule_num": 4,
-   "normal_bubble": "You\u2019re exhausted.",
-   "echo_bubble": "Terrified.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 387,
+   "scene": "entity_grin",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s53",
-   "word_start": 335,
+   "word_start": 393,
    "scene": "room_bed",
-   "rule_num": 4,
-   "normal_bubble": "Aches for sleep.",
-   "echo_bubble": "For escape.",
-   "danger": true,
-   "sfx": "none"
+   "rule_num": 7,
+   "normal_bubble": "Hunts",
+   "echo_bubble": "Mimics",
+   "danger": true
   },
   {
    "id": "s54",
-   "word_start": 341,
-   "scene": "big_word",
-   "rule_num": 4,
-   "title": "POWER IN DARKNESS",
-   "sfx": "none"
+   "word_start": 400,
+   "scene": "room_doorway",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s55",
-   "word_start": 346,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "Sounds will change.",
-   "echo_bubble": "More intimate.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 406,
+   "scene": "room_bed",
+   "rule_num": 7,
+   "normal_bubble": "Panic",
+   "echo_bubble": "Speak",
+   "danger": true
   },
   {
    "id": "s56",
-   "word_start": 352,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "Describe your room.",
-   "echo_bubble": "Your bed. Your face.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 418,
+   "scene": "room_bed",
+   "rule_num": 7,
+   "normal_bubble": "Not a threat",
+   "echo_bubble": "Already gone",
+   "danger": false
   },
   {
    "id": "s57",
-   "word_start": 359,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "Knows what you're doing.",
-   "echo_bubble": "What you're thinking.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 427,
+   "scene": "phone_clock",
+   "rule_num": 7,
+   "normal_bubble": "13 minutes",
+   "echo_bubble": "...",
+   "danger": false
   },
   {
    "id": "s58",
-   "word_start": 366,
-   "scene": "big_word",
-   "rule_num": 4,
-   "title": "GETS INSIDE YOUR HEAD",
-   "sfx": "none"
+   "word_start": 435,
+   "scene": "room_doorway",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s59",
-   "word_start": 372,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "Mark closed his eyes.",
-   "echo_bubble": "For a second.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 443,
+   "scene": "room_pet",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s60",
-   "word_start": 378,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "You're tired, aren't you?",
-   "echo_bubble": "Blanket is blue.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 450,
+   "scene": "rewind_clue",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s61",
-   "word_start": 384,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "Window open a crack.",
-   "echo_bubble": "Mark knew it was closed.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 456,
+   "scene": "rewind_clue",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s62",
-   "word_start": 391,
-   "scene": "room_bed",
-   "rule_num": 4,
-   "normal_bubble": "Window was open.",
-   "echo_bubble": "Curtain swayed.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 462,
+   "scene": "rewind_clue",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s63",
-   "word_start": 396,
-   "scene": "phone_call",
-   "rule_num": 4,
-   "normal_bubble": "Keep your eyes open.",
-   "echo_bubble": "Stare at your phone.",
-   "danger": false,
-   "sfx": "none"
+   "word_start": 468,
+   "scene": "rewind_clue",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s64",
-   "word_start": 403,
-   "scene": "rule_card",
-   "rule_num": 5,
-   "title": "DO NOT MENTION MOM",
-   "sfx": "sting"
+   "word_start": 474,
+   "scene": "rewind_clue",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s65",
-   "word_start": 406,
-   "scene": "room_pet",
-   "rule_num": 5,
-   "normal_bubble": "Or any family.",
-   "echo_bubble": "Siblings. Pets.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 480,
+   "scene": "room_doorway",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s66",
-   "word_start": 412,
-   "scene": "room_couch",
-   "rule_num": 5,
-   "normal_bubble": "You\u2019ll want to.",
-   "echo_bubble": "Remind yourself.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 486,
+   "scene": "phone_call",
+   "rule_num": 7,
+   "danger": false
   },
   {
    "id": "s67",
-   "word_start": 418,
+   "word_start": 492,
    "scene": "big_word",
-   "rule_num": 5,
-   "title": "MIMIC FEEDS ON LOVE",
-   "sfx": "none"
+   "rule_num": 7,
+   "title": "PLAY DEAD",
+   "sfx": "sting"
   },
   {
    "id": "s68",
-   "word_start": 423,
-   "scene": "phone_call",
-   "rule_num": 5,
-   "normal_bubble": "Shift its focus.",
-   "echo_bubble": "Mimic *their* voice.",
-   "danger": true,
-   "sfx": "none"
+   "word_start": 498,
+   "scene": "entity_grin",
+   "rule_num": 7,
+   "danger": true
   },
   {
    "id": "s69",
-   "word_start": 430,
-   "scene": "phone_call",
-   "rule_num": 5,
-   "normal_bubble": "Their cries. Their pleas.",
-   "echo_bubble": "Use them to tempt.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s70",
-   "word_start": 439,
-   "scene": "big_word",
-   "rule_num": 5,
-   "title": "PERFECT MIMICRY",
-   "sfx": "none"
-  },
-  {
-   "id": "s71",
-   "word_start": 445,
-   "scene": "phone_call",
-   "rule_num": 5,
-   "normal_bubble": "Sarah called for mom.",
-   "echo_bubble": "Phone filled with screams.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s72",
-   "word_start": 451,
-   "scene": "phone_call",
-   "rule_num": 5,
-   "normal_bubble": "Sarah! Help me!",
-   "echo_bubble": "It's in the bedroom!",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s73",
-   "word_start": 458,
-   "scene": "phone_call",
-   "rule_num": 5,
-   "normal_bubble": "Mom was away.",
-   "echo_bubble": "Scream was so real.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s74",
-   "word_start": 465,
-   "scene": "phone_call",
-   "rule_num": 5,
-   "normal_bubble": "Don't mention them.",
-   "echo_bubble": "Keep them safe.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s75",
-   "word_start": 472,
-   "scene": "rule_card",
-   "rule_num": 6,
-   "title": "DO NOT LOOK AT REFLECTION",
-   "sfx": "sting"
-  },
-  {
-   "id": "s76",
-   "word_start": 475,
-   "scene": "phone_call",
-   "rule_num": 6,
-   "normal_bubble": "Looking at phone.",
-   "echo_bubble": "At your face.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s77",
-   "word_start": 481,
-   "scene": "phone_call",
-   "rule_num": 6,
-   "normal_bubble": "See your reflection.",
-   "echo_bubble": "Fear in your eyes.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s78",
-   "word_start": 487,
-   "scene": "entity_grin",
-   "rule_num": 6,
-   "normal_bubble": "It will be there.",
-   "echo_bubble": "Behind you.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s79",
-   "word_start": 492,
-   "scene": "entity_grin",
-   "rule_num": 6,
-   "normal_bubble": "A distortion.",
-   "echo_bubble": "A flicker. A grin.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s80",
-   "word_start": 498,
-   "scene": "big_word",
-   "rule_num": 6,
-   "title": "IN YOUR PERCEPTION",
-   "sfx": "none"
-  },
-  {
-   "id": "s81",
-   "word_start": 502,
-   "scene": "entity_grin",
-   "rule_num": 6,
-   "normal_bubble": "It will solidify.",
-   "echo_bubble": "Reveal itself.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s82",
-   "word_start": 508,
-   "scene": "entity_grin",
-   "rule_num": 6,
-   "normal_bubble": "Twisted version of you.",
-   "echo_bubble": "Mocking echo.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s83",
-   "word_start": 516,
-   "scene": "big_word",
-   "rule_num": 6,
-   "title": "WHAT YOU BECOME",
-   "sfx": "none"
-  },
-  {
-   "id": "s84",
-   "word_start": 521,
-   "scene": "phone_call",
-   "rule_num": 6,
-   "normal_bubble": "David stared at phone.",
-   "echo_bubble": "Saw his reflection.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s85",
-   "word_start": 528,
-   "scene": "entity_grin",
-   "rule_num": 6,
-   "normal_bubble": "Faint grin spread.",
-   "echo_bubble": "Across *his* face.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s86",
-   "word_start": 534,
-   "scene": "entity_grin",
-   "rule_num": 6,
-   "normal_bubble": "Not his face anymore.",
-   "echo_bubble": "Wider. Sharper.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s87",
-   "word_start": 540,
-   "scene": "phone_call",
-   "rule_num": 6,
-   "normal_bubble": "Still grinning.",
-   "echo_bubble": "Dropped the phone.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s88",
-   "word_start": 545,
-   "scene": "phone_call",
-   "rule_num": 6,
-   "normal_bubble": "Call ended.",
-   "echo_bubble": "Reflection remained.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s89",
-   "word_start": 552,
-   "scene": "phone_call",
-   "rule_num": 6,
-   "normal_bubble": "Don't look at reflection.",
-   "echo_bubble": "Focus on caller ID.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s90",
-   "word_start": 559,
-   "scene": "rule_card",
-   "rule_num": 7,
-   "title": "DO NOT END CALL",
-   "subtitle": "UNTIL SUN RISES",
-   "sfx": "sting"
-  },
-  {
-   "id": "s91",
-   "word_start": 566,
-   "scene": "big_word",
-   "rule_num": 7,
-   "title": "CRUCIAL RULE",
-   "sfx": "none"
-  },
-  {
-   "id": "s92",
-   "word_start": 570,
+   "word_start": 504,
    "scene": "phone_call",
    "rule_num": 7,
-   "normal_bubble": "Call is a barrier.",
-   "echo_bubble": "A shield.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s93",
-   "word_start": 576,
-   "scene": "phone_call",
-   "rule_num": 7,
-   "normal_bubble": "Fragile connection.",
-   "echo_bubble": "To reality.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s94",
-   "word_start": 583,
-   "scene": "entity_grin",
-   "rule_num": 7,
-   "normal_bubble": "Cannot fully manifest.",
-   "echo_bubble": "Cannot claim you.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s95",
-   "word_start": 590,
-   "scene": "big_word",
-   "rule_num": 7,
-   "title": "THRIVES IN DARK",
-   "sfx": "none"
-  },
-  {
-   "id": "s96",
-   "word_start": 594,
-   "scene": "phone_clock",
-   "rule_num": 7,
-   "normal_bubble": "Between sleep & waking.",
-   "echo_bubble": "Night & day.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s97",
-   "word_start": 601,
-   "scene": "phone_clock",
-   "rule_num": 7,
-   "normal_bubble": "Sun rises, power weakens.",
-   "echo_bubble": "Hold loosens.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s98",
-   "word_start": 607,
-   "scene": "phone_call",
-   "rule_num": 7,
-   "normal_bubble": "Call will end naturally.",
-   "echo_bubble": "Mimic retreat.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s99",
-   "word_start": 613,
-   "scene": "room_bed",
-   "rule_num": 7,
-   "normal_bubble": "You will be safe.",
-   "echo_bubble": "Until next time.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s100",
-   "word_start": 622,
-   "scene": "phone_call",
-   "rule_num": 7,
-   "normal_bubble": "Relief overwhelming.",
-   "echo_bubble": "Sounds fade.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s101",
-   "word_start": 627,
-   "scene": "phone_call",
-   "rule_num": 7,
-   "normal_bubble": "Connection breaks.",
-   "echo_bubble": "World normal again.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s102",
-   "word_start": 634,
-   "scene": "big_word",
-   "rule_num": 7,
-   "title": "NEVER FORGET",
-   "sfx": "none"
-  },
-  {
-   "id": "s103",
-   "word_start": 640,
-   "scene": "rewind_clue",
-   "rule_num": 0,
-   "normal_bubble": "Think back.",
-   "echo_bubble": "Late calls.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s104",
-   "word_start": 646,
-   "scene": "rewind_clue",
-   "rule_num": 0,
-   "normal_bubble": "Butt dials.",
-   "echo_bubble": "Odd hours.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s105",
-   "word_start": 651,
-   "scene": "rewind_clue",
-   "rule_num": 0,
-   "normal_bubble": "Phone vibrate.",
-   "echo_bubble": "Inside house.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s106",
-   "word_start": 658,
-   "scene": "rewind_clue",
-   "rule_num": 0,
-   "normal_bubble": "Swore he was asleep.",
-   "echo_bubble": "Or out.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s107",
-   "word_start": 663,
-   "scene": "rewind_clue",
-   "rule_num": 0,
-   "normal_bubble": "Weird, static calls.",
-   "echo_bubble": "Hung up.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s108",
-   "word_start": 670,
-   "scene": "big_word",
-   "rule_num": 0,
-   "title": "NOT ACCIDENTS",
-   "sfx": "none"
-  },
-  {
-   "id": "s109",
-   "word_start": 673,
-   "scene": "big_word",
-   "rule_num": 0,
-   "title": "NOT GLITCHES",
-   "sfx": "none"
-  },
-  {
-   "id": "s110",
-   "word_start": 676,
-   "scene": "entity_grin",
-   "rule_num": 0,
-   "normal_bubble": "Those were tests.",
-   "echo_bubble": "Invitations.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s111",
-   "word_start": 682,
-   "scene": "entity_grin",
-   "rule_num": 0,
-   "normal_bubble": "*It* learning.",
-   "echo_bubble": "Observing. Waiting.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s112",
-   "word_start": 688,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Perfect 3:03 AM.",
-   "echo_bubble": "So, you answer it.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s113",
-   "word_start": 697,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "And you hold on.",
-   "echo_bubble": "Until the sun.",
-   "danger": false,
-   "sfx": "none"
-  },
-  {
-   "id": "s114",
-   "word_start": 703,
-   "scene": "phone_call",
-   "rule_num": 0,
-   "normal_bubble": "Until the light.",
-   "echo_bubble": "Or you don't.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s115",
-   "word_start": 709,
-   "scene": "entity_grin",
-   "rule_num": 0,
-   "normal_bubble": "You become the next call.",
-   "echo_bubble": "The next lesson.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s116",
-   "word_start": 715,
-   "scene": "entity_grin",
-   "rule_num": 0,
-   "normal_bubble": "The next perfect mimic.",
-   "echo_bubble": "Comment below.",
-   "danger": true,
-   "sfx": "none"
-  },
-  {
-   "id": "s117",
-   "word_start": 725,
-   "scene": "rule_card",
-   "rule_num": 0,
-   "title": "STAY SAFE",
-   "sfx": "sting"
-  },
-  {
-   "id": "s118",
-   "word_start": 728,
-   "scene": "rule_card",
-   "rule_num": 0,
-   "title": "STAY VIGILANT",
-   "sfx": "sting"
-  },
-  {
-   "id": "s119",
-   "word_start": 732,
-   "scene": "big_word",
-   "rule_num": 0,
-   "title": "NEVER UNDERESTIMATE SILENCE",
-   "sfx": "none"
+   "danger": false
   }
  ]
 }
