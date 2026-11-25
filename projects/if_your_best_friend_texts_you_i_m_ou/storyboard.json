@@ -1,0 +1,503 @@
+{
+ "channel": "NIGHTORA",
+ "day": "TUESDAY",
+ "file_num": "01",
+ "keywords": [
+  "ISN'T",
+  "REAL",
+  "SEVEN",
+  "TEN",
+  "DON'T",
+  "NEVER",
+  "LEO",
+  "LIAM",
+  "HOW",
+  "FEAR",
+  "TAP",
+  "WRONG",
+  "MOM",
+  "SILENCE",
+  "DAWN",
+  "STOLEN",
+  "MONSTER",
+  "TRAPPED",
+  "FATE",
+  "TIGHT"
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "cue": "If your best",
+   "scene": "face_shadow",
+   "bubble": true,
+   "sfx": "ominous_hum"
+  },
+  {
+   "id": "s02",
+   "cue": "This isn't a",
+   "scene": "strike_words",
+   "words": [
+    "SAFE",
+    "GAME",
+    "FRIEND"
+   ]
+  },
+  {
+   "id": "s03",
+   "cue": "They say there",
+   "scene": "rule_dots"
+  },
+  {
+   "id": "s04",
+   "cue": "Ten. Nine. Eight.",
+   "scene": "clock_countdown",
+   "clock": "0:10",
+   "sfx": "countdown_beep"
+  },
+  {
+   "id": "s05",
+   "cue": "Don't look out",
+   "scene": "window_dawn",
+   "dawn": false
+  },
+  {
+   "id": "s06",
+   "cue": "Leo was eleven.",
+   "scene": "house_cutaway",
+   "highlight_room": true,
+   "bubble": "Dinner!",
+   "sfx": "bell_chime"
+  },
+  {
+   "id": "s07",
+   "cue": "He was halfway",
+   "scene": "stairs_creak",
+   "step": 3
+  },
+  {
+   "id": "s08",
+   "cue": "A text. From",
+   "scene": "face_kid",
+   "mood": "neutral",
+   "bubble": "I'm outside."
+  },
+  {
+   "id": "s09",
+   "cue": "Leo paused. Liam",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s10",
+   "cue": "Rule one. Don't",
+   "scene": "rule_card",
+   "rule_num": 1,
+   "title": "DON'T ANSWER THE VOICE."
+  },
+  {
+   "id": "s11",
+   "cue": "The voice isn't",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s12",
+   "cue": "Ignore it. Delete",
+   "scene": "face_kid",
+   "mood": "scared",
+   "bubble": true
+  },
+  {
+   "id": "s13",
+   "cue": "Leo stared at",
+   "scene": "lamp_reach",
+   "clock": "9:14"
+  },
+  {
+   "id": "s14",
+   "cue": "He heard his",
+   "scene": "kitchen_view",
+   "bubble": "Your pizza's getting cold, sweetie!"
+  },
+  {
+   "id": "s15",
+   "cue": "He went down.",
+   "scene": "house_cutaway",
+   "highlight_room": true,
+   "both_figures": true
+  },
+  {
+   "id": "s16",
+   "cue": "He went to",
+   "scene": "bedroom_view",
+   "clock": "10:30",
+   "kid": true
+  },
+  {
+   "id": "s17",
+   "cue": "Rule two. Don't",
+   "scene": "rule_card",
+   "rule_num": 2,
+   "title": "DON'T LOOK OUT THE WINDOW."
+  },
+  {
+   "id": "s18",
+   "cue": "The thing outside",
+   "scene": "window_dawn",
+   "dawn": false
+  },
+  {
+   "id": "s19",
+   "cue": "Don't give it",
+   "scene": "notepad_rules",
+   "title": "BLINDS SHUT."
+  },
+  {
+   "id": "s20",
+   "cue": "Leo\u2019s blinds were",
+   "scene": "bedroom_view",
+   "kid": true
+  },
+  {
+   "id": "s21",
+   "cue": "He tried to",
+   "scene": "clock_countdown",
+   "clock": "11:40"
+  },
+  {
+   "id": "s22",
+   "cue": "Another text. From",
+   "scene": "face_kid",
+   "mood": "gasp",
+   "bubble": "I can see you."
+  },
+  {
+   "id": "s23",
+   "cue": "Leo gasped. He",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s24",
+   "cue": "He deleted the",
+   "scene": "lamp_reach",
+   "clock": "11:40"
+  },
+  {
+   "id": "s25",
+   "cue": "Rule three. Don't",
+   "scene": "rule_card",
+   "rule_num": 3,
+   "title": "DON'T ACKNOWLEDGE ITS EXISTENCE."
+  },
+  {
+   "id": "s26",
+   "cue": "It feeds on",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s27",
+   "cue": "Pretend it isn't",
+   "scene": "strike_words",
+   "words": [
+    "WIND",
+    "IMAGINATION",
+    "NOTHING"
+   ]
+  },
+  {
+   "id": "s28",
+   "cue": "Leo pulled the",
+   "scene": "bedroom_view",
+   "kid": true,
+   "trap_box": true
+  },
+  {
+   "id": "s29",
+   "cue": "He heard a",
+   "scene": "window_dawn",
+   "dawn": false,
+   "sfx": "window_tap"
+  },
+  {
+   "id": "s30",
+   "cue": "Rule four. Don't",
+   "scene": "rule_card",
+   "rule_num": 4,
+   "title": "DON'T OPEN THE DOOR."
+  },
+  {
+   "id": "s31",
+   "cue": "Or the window.",
+   "scene": "door_crack",
+   "feet": false
+  },
+  {
+   "id": "s32",
+   "cue": "It will try",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s33",
+   "cue": "The tapping grew",
+   "scene": "window_dawn",
+   "dawn": false,
+   "sfx": "scratch_sound"
+  },
+  {
+   "id": "s34",
+   "cue": "Leo buried his",
+   "scene": "face_kid",
+   "mood": "cry"
+  },
+  {
+   "id": "s35",
+   "cue": "At 3:02 AM,",
+   "scene": "clock_countdown",
+   "clock": "3:02"
+  },
+  {
+   "id": "s36",
+   "cue": "A soft, familiar",
+   "scene": "hallway_figure",
+   "bubble": "Leo? Sweetie? Are you awake? It's Mom."
+  },
+  {
+   "id": "s37",
+   "cue": "Rule five. Don't",
+   "scene": "rule_card",
+   "rule_num": 5,
+   "title": "DON'T ANSWER THE CALL."
+  },
+  {
+   "id": "s38",
+   "cue": "It can mimic",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s39",
+   "cue": "Don't respond. Don't",
+   "scene": "face_kid",
+   "mood": "scared",
+   "sound_waves": true
+  },
+  {
+   "id": "s40",
+   "cue": "Leo froze. His",
+   "scene": "bedroom_view",
+   "kid": true
+  },
+  {
+   "id": "s41",
+   "cue": "Leo, open the",
+   "scene": "hallway_figure",
+   "bubble": "Leo, open the door. I made you hot chocolate. You had a bad dream."
+  },
+  {
+   "id": "s42",
+   "cue": "His mom never",
+   "scene": "kitchen_view",
+   "bubble": "Hot chocolate!"
+  },
+  {
+   "id": "s43",
+   "cue": "Come on, Leo.",
+   "scene": "hallway_figure",
+   "bubble": "Come on, Leo. Don't be silly. It's just me."
+  },
+  {
+   "id": "s44",
+   "cue": "He stayed perfectly",
+   "scene": "bedroom_view",
+   "kid": true
+  },
+  {
+   "id": "s45",
+   "cue": "He heard slow,",
+   "scene": "stairs_creak",
+   "step": 6
+  },
+  {
+   "id": "s46",
+   "cue": "Rule six. Don't",
+   "scene": "rule_card",
+   "rule_num": 6,
+   "title": "DON'T LET IT KNOW YOU KNOW."
+  },
+  {
+   "id": "s47",
+   "cue": "It wants to",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s48",
+   "cue": "Never let it",
+   "scene": "notepad_rules",
+   "title": "YOUR SILENCE IS YOUR SHIELD."
+  },
+  {
+   "id": "s49",
+   "cue": "He heard the",
+   "scene": "door_crack",
+   "feet": true,
+   "sfx": "door_creak"
+  },
+  {
+   "id": "s50",
+   "cue": "Then\u2026 silence.",
+   "scene": "house_cutaway",
+   "highlight_room": false
+  },
+  {
+   "id": "s51",
+   "cue": "Leo lay awake.",
+   "scene": "bedroom_view",
+   "kid": true
+  },
+  {
+   "id": "s52",
+   "cue": "He crept out",
+   "scene": "clock_countdown",
+   "clock": "5:51"
+  },
+  {
+   "id": "s53",
+   "cue": "Tiptoed to the",
+   "scene": "window_dawn",
+   "dawn": true
+  },
+  {
+   "id": "s54",
+   "cue": "The sun was",
+   "scene": "house_cutaway",
+   "highlight_room": false
+  },
+  {
+   "id": "s55",
+   "cue": "Liam's bike was",
+   "scene": "flashback_scene",
+   "sfx": "bike_bell"
+  },
+  {
+   "id": "s56",
+   "cue": "That's when he",
+   "scene": "callback_text",
+   "title": "LIAM'S BIKE STOLEN.",
+   "subtitle": "LAST WEEK",
+   "danger": true
+  },
+  {
+   "id": "s57",
+   "cue": "And Liam never",
+   "scene": "face_kid",
+   "mood": "gasp",
+   "bubble": true
+  },
+  {
+   "id": "s58",
+   "cue": "Rule seven. The",
+   "scene": "rule_card",
+   "rule_num": 7,
+   "title": "THE REAL MONSTER.",
+   "danger": true
+  },
+  {
+   "id": "s59",
+   "cue": "There was no",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s60",
+   "cue": "There was only",
+   "scene": "notepad_rules",
+   "title": "A TEST.",
+   "show_q7": true,
+   "rule_text": "WHO DO YOU PROTECT?"
+  },
+  {
+   "id": "s61",
+   "cue": "The Rules weren't",
+   "scene": "strike_words",
+   "words": [
+    "YOUR SAFETY",
+    "YOUR FEAR",
+    "YOUR IMAGINATION"
+   ]
+  },
+  {
+   "id": "s62",
+   "cue": "They were for",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s63",
+   "cue": "You were supposed",
+   "scene": "door_crack",
+   "feet": false
+  },
+  {
+   "id": "s64",
+   "cue": "You were supposed",
+   "scene": "window_dawn",
+   "dawn": false
+  },
+  {
+   "id": "s65",
+   "cue": "Because the real",
+   "scene": "face_smile",
+   "bubble": true
+  },
+  {
+   "id": "s66",
+   "cue": "And by following",
+   "scene": "wrist_grab",
+   "stretch": true
+  },
+  {
+   "id": "s67",
+   "cue": "Leo heard a",
+   "scene": "house_cutaway",
+   "highlight_room": true,
+   "bubble": "Whimper",
+   "sfx": "whimper_sound"
+  },
+  {
+   "id": "s68",
+   "cue": "His mom.",
+   "scene": "face_mom_cry",
+   "mood": "cry"
+  },
+  {
+   "id": "s69",
+   "cue": "His phone buzzed.",
+   "scene": "face_kid",
+   "mood": "gasp",
+   "bubble": "He's inside, Leo. He's been inside all night."
+  },
+  {
+   "id": "s70",
+   "cue": "Don't look out",
+   "scene": "window_dawn",
+   "dawn": false
+  },
+  {
+   "id": "s71",
+   "cue": "You just sealed",
+   "scene": "face_shadow",
+   "bubble": true
+  },
+  {
+   "id": "s72",
+   "cue": "Sleep tight.",
+   "scene": "bedroom_view",
+   "kid": true,
+   "dark_figure": true
+  }
+ ]
+}
