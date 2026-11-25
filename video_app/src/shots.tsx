@@ -14,7 +14,8 @@ function wordTime(idx: number): number {
   if (!W.words || W.words.length === 0) return idx * 0.4;
   if (idx <= 0) return 0;
   const clamped = Math.min(idx, W.words.length - 1);
-  return W.words[clamped][0];
+  const item: any = W.words[clamped];
+  return Array.isArray(item) ? item[0] : (item.start ?? 0);
 }
 
 const timedScenes = SB.scenes.map((sc, i) => ({
