@@ -1,0 +1,1311 @@
+{
+ "channel": "NIGHTORA",
+ "day": "FRIDAY",
+ "file_num": "01",
+ "keywords": [
+  "REARVIEW",
+  "MIRROR",
+  "BACKSEAT",
+  "BRAKES",
+  "SHOULDER",
+  "ROUTE",
+  "SPEEDOMETER",
+  "STATIC",
+  "ENGINE",
+  "BRIDGE",
+  "FROST",
+  "TRAP",
+  "WRECKAGE",
+  "DEAD",
+  "WAVE"
+ ],
+ "scenes": [
+  {
+   "cue": "If you glance into your",
+   "scene": "custom_svg",
+   "visual_brief": "Extreme close-up of a sedan rearview mirror reflecting empty dark back seat headrests against deep black night.",
+   "fallback_scene": "mirror_view",
+   "sfx": "sting",
+   "bubble": "Don't look too long",
+   "id": "s01",
+   "svg": "<rect x=\"440\" y=\"160\" width=\"400\" height=\"160\" rx=\"15\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><path d=\"M480 280 C560 250 720 250 800 280\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" fill=\"none\" /><circle cx=\"560\" cy=\"220\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2\" fill=\"#202328\" /><circle cx=\"720\" cy=\"220\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2\" fill=\"#202328\" /><line x1=\"640\" y1=\"320\" x2=\"640\" y2=\"380\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "see a silhouette sitting in",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror view showing a faint pale human silhouette upright in the dark center back seat.",
+   "fallback_scene": "mirror_view",
+   "id": "s02",
+   "svg": "<rect x=\"440\" y=\"160\" width=\"400\" height=\"160\" rx=\"15\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"210\" r=\"35\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M590 280 C590 240 690 240 690 280\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><line x1=\"640\" y1=\"320\" x2=\"640\" y2=\"380\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "do not slam the brakes.",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up of driver foot hovering tensely over brake pedal inside dark car footwell.",
+   "fallback_scene": "hand_reach",
+   "id": "s03",
+   "svg": "<rect x=\"480\" y=\"120\" width=\"320\" height=\"440\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M520 440 L600 360 L720 380 L760 480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"560\" y=\"320\" width=\"60\" height=\"100\" rx=\"8\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><ellipse cx=\"590\" cy=\"280\" rx=\"35\" ry=\"20\" stroke=\"#F2B84B\" stroke-width=\"2\" fill=\"rgba(242,184,75,0.1)\" />"
+  },
+  {
+   "cue": "Do not turn your head.",
+   "scene": "custom_svg",
+   "visual_brief": "Side profile of tense driver staring dead ahead, rigid neck, dashboard glow on cheek.",
+   "fallback_scene": "face_protag",
+   "id": "s04",
+   "svg": "<path d=\"M480 360 L540 220 L640 200 L720 280 L760 480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"580\" cy=\"240\" r=\"40\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"#111111\" /><path d=\"M550 320 C580 300 640 320 680 400\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"480\" y=\"420\" width=\"320\" height=\"40\" stroke=\"#FF3B30\" stroke-width=\"1.5\" fill=\"rgba(255,59,48,0.15)\" />"
+  },
+  {
+   "cue": "And whatever you do, do",
+   "scene": "custom_svg",
+   "visual_brief": "POV windshield view of desolate dark asphalt road curving into thick fog and black trees.",
+   "fallback_scene": "street_lamp",
+   "id": "s05",
+   "svg": "<polygon points=\"640,240 520,520 760,520\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><path d=\"M520 520 C580 460 700 460 760 520\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" fill=\"none\" /><path d=\"M360 520 L480 240 L520 240 L400 520 Z\" stroke=\"#4B505A\" stroke-width=\"1.5\" fill=\"#202328\" /><path d=\"M920 520 L800 240 L760 240 L880 520 Z\" stroke=\"#4B505A\" stroke-width=\"1.5\" fill=\"#202328\" />"
+  },
+  {
+   "cue": "You are driving alone on",
+   "scene": "callback_text",
+   "title": "ROUTE 49",
+   "subtitle": "MILE MARKER 114 \u2014 NO EXIT",
+   "danger": false,
+   "id": "s06",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "It is two seventeen in",
+   "scene": "clock_led",
+   "clock": "2:17",
+   "id": "s07",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "The road stretches between black",
+   "scene": "custom_svg",
+   "visual_brief": "Wide exterior shot of lone vintage sedan cruising through towering pitch-black pine trees.",
+   "fallback_scene": "window_outside",
+   "id": "s08",
+   "svg": "<rect x=\"200\" y=\"200\" width=\"880\" height=\"280\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><path d=\"M200 400 L1080 400\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" stroke-dasharray=\"20,15\" /><rect x=\"500\" y=\"340\" width=\"280\" height=\"80\" rx=\"25\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"560\" cy=\"420\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2\" fill=\"#111111\" /><circle cx=\"720\" cy=\"420\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2\" fill=\"#111111\" />"
+  },
+  {
+   "cue": "You bought this sedan three",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up of car key in ignition tumbler with rusted brass auction tag labeled LOT 49.",
+   "fallback_scene": "door_crack",
+   "id": "s09",
+   "svg": "<circle cx=\"640\" cy=\"340\" r=\"100\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"340\" r=\"40\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M640 300 L640 220 L680 180\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"600\" y=\"220\" width=\"80\" height=\"50\" rx=\"5\" stroke=\"#F2B84B\" stroke-width=\"2\" fill=\"rgba(242,184,75,0.2)\" /><text x=\"640\" y=\"250\" font-family=\"monospace\" font-size=\"14\" fill=\"#F2F2F2\" text-anchor=\"middle\">LOT 49</text>"
+  },
+  {
+   "cue": "In the glovebox, folded inside",
+   "scene": "custom_svg",
+   "visual_brief": "Glove compartment popping open in darkness, revealing worn leather manual and aged index card.",
+   "fallback_scene": "door_crack",
+   "sfx": "click",
+   "id": "s10",
+   "svg": "<rect x=\"360\" y=\"200\" width=\"560\" height=\"320\" rx=\"15\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><path d=\"M360 320 L920 320\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><rect x=\"460\" y=\"260\" width=\"360\" height=\"220\" rx=\"5\" stroke=\"#D2D4D6\" stroke-width=\"2\" fill=\"#F2F2F2\" /><line x1=\"500\" y1=\"300\" x2=\"780\" y2=\"300\" stroke=\"#111111\" stroke-width=\"2\" /><line x1=\"500\" y1=\"340\" x2=\"740\" y2=\"340\" stroke=\"#111111\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "is an index card with",
+   "scene": "notepad_rules",
+   "title": "VEHICLE PROTOCOL",
+   "show_q7": true,
+   "rule_text": "THEY ONLY EXIST WHILE ENGINE RUNS",
+   "id": "s11",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "The first sentence reads: They",
+   "scene": "custom_svg",
+   "visual_brief": "Macro shot of faded blue ink handwriting on index card reading They only exist while running.",
+   "fallback_scene": "hand_reach",
+   "id": "s12",
+   "svg": "<rect x=\"380\" y=\"180\" width=\"520\" height=\"360\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#F2F2F2\" /><line x1=\"440\" y1=\"260\" x2=\"840\" y2=\"260\" stroke=\"#7EC8F2\" stroke-width=\"3\" /><line x1=\"440\" y1=\"320\" x2=\"800\" y2=\"320\" stroke=\"#7EC8F2\" stroke-width=\"3\" /><line x1=\"440\" y1=\"380\" x2=\"720\" y2=\"380\" stroke=\"#7EC8F2\" stroke-width=\"3\" /><line x1=\"440\" y1=\"440\" x2=\"600\" y2=\"440\" stroke=\"#7EC8F2\" stroke-width=\"3\" />"
+  },
+  {
+   "cue": "Rule seven is underlined twice.",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up of line seven on index card scratched with heavy double underlined ink.",
+   "fallback_scene": "hand_reach",
+   "id": "s13",
+   "svg": "<rect x=\"380\" y=\"180\" width=\"520\" height=\"360\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#F2F2F2\" /><line x1=\"440\" y1=\"240\" x2=\"840\" y2=\"240\" stroke=\"#111111\" stroke-width=\"2\" /><line x1=\"440\" y1=\"300\" x2=\"840\" y2=\"300\" stroke=\"#111111\" stroke-width=\"2\" /><line x1=\"440\" y1=\"360\" x2=\"840\" y2=\"360\" stroke=\"#FF3B30\" stroke-width=\"4\" /><line x1=\"440\" y1=\"372\" x2=\"840\" y2=\"372\" stroke=\"#FF3B30\" stroke-width=\"4\" /><line x1=\"440\" y1=\"420\" x2=\"760\" y2=\"420\" stroke=\"#111111\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "Listen closely, because your GPS",
+   "scene": "phone_map",
+   "sender": "GPS NAV",
+   "distance": "SIGNAL LOST",
+   "id": "s14",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "and the fog is rolling",
+   "scene": "custom_svg",
+   "visual_brief": "Sedan hood slicing through heavy swirling white ground fog, yellow headlights barely penetrating.",
+   "fallback_scene": "window_outside",
+   "id": "s15",
+   "svg": "<path d=\"M120 480 Q 300 450 640 480 T 1160 480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M300 480 Q 450 420 640 450 T 980 480\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" stroke-dasharray=\"10 15\" fill=\"none\" /><polygon points=\"180,420 1100,420 1160,540 120,540\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"240\" cy=\"480\" r=\"35\" fill=\"rgba(242,184,75,0.22)\" /><circle cx=\"1040\" cy=\"480\" r=\"35\" fill=\"rgba(242,184,75,0.22)\" /><path d=\"M120 520 Q 400 570 640 520 T 1160 520\" stroke=\"#D2D4D6\" stroke-width=\"4\" fill=\"none\" opacity=\"0.6\" />"
+  },
+  {
+   "cue": "Rule one. Check your mirror",
+   "scene": "rule_card",
+   "rule_num": 1,
+   "title": "CHECK MIRROR ONCE",
+   "danger": false,
+   "id": "s16",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "At two eighteen, your eyes",
+   "scene": "clock_led",
+   "clock": "2:18",
+   "id": "s17",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "drift up to the glass.",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up of male driver eyes flicking upward into rearview mirror with stark terror.",
+   "fallback_scene": "eye_closeup",
+   "id": "s18",
+   "svg": "<rect x=\"500\" y=\"180\" width=\"280\" height=\"160\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><ellipse cx=\"640\" cy=\"260\" rx=\"100\" ry=\"50\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" fill=\"none\" /><circle cx=\"600\" cy=\"260\" r=\"12\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#111111\" /><circle cx=\"680\" cy=\"260\" r=\"12\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#111111\" /><circle cx=\"600\" cy=\"256\" r=\"3\" fill=\"#FF3B30\" /><circle cx=\"680\" cy=\"256\" r=\"3\" fill=\"#FF3B30\" /><path d=\"M620 290 Q 640 310 660 290\" stroke=\"#111111\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M580 220 Q 640 190 700 220\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "In the deep shadow behind",
+   "scene": "custom_svg",
+   "visual_brief": "Interior car view: two unnaturally pale elongated hands resting on black leather rear seat.",
+   "fallback_scene": "hand_reach",
+   "id": "s19",
+   "svg": "<rect x=\"180\" y=\"150\" width=\"920\" height=\"360\" rx=\"30\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><path d=\"M220 420 Q 640 380 1060 420 L 1060 480 Q 640 440 220 480 Z\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M380 440 C 350 380 320 380 300 440 M300 440 L 420 440\" stroke=\"#D2D4D6\" stroke-width=\"3\" fill=\"none\" /><path d=\"M900 440 C 930 380 960 380 980 440 M980 440 L 860 440\" stroke=\"#D2D4D6\" stroke-width=\"3\" fill=\"none\" />"
+  },
+  {
+   "cue": "A figure sits completely upright",
+   "scene": "custom_svg",
+   "visual_brief": "Silhouette of seated passenger in center rear seat, shoulders rigid and perfectly centered.",
+   "fallback_scene": "face_shadow",
+   "id": "s20",
+   "svg": "<rect x=\"240\" y=\"120\" width=\"800\" height=\"420\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M440 480 L 440 300 Q 440 220 640 220 Q 840 220 840 300 L 840 480\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"640\" cy=\"180\" r=\"45\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><line x1=\"640\" y1=\"225\" x2=\"640\" y2=\"480\" stroke=\"#111111\" stroke-width=\"3\" />"
+  },
+  {
+   "cue": "Its shoulders are stiff and",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up on passenger coat collar and stiff unnatural neck tilted at sharp forty-five degrees.",
+   "fallback_scene": "face_uncanny",
+   "id": "s21",
+   "svg": "<path d=\"M440 420 L 480 280 L 800 280 L 840 420\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M580 280 L 620 190 L 700 210 L 730 280\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"660\" cy=\"150\" r=\"40\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M520 280 Q 640 320 760 280\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Its head is tilted at",
+   "scene": "custom_svg",
+   "visual_brief": "Detailed silhouette of passenger head bent sickeningly sideways against the rear glass.",
+   "fallback_scene": "face_uncanny",
+   "sfx": "creak",
+   "id": "s22",
+   "svg": "<rect x=\"340\" y=\"140\" width=\"600\" height=\"380\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M480 500 L 480 320 Q 520 280 640 280 Q 760 280 800 320 L 800 500\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"750\" cy=\"240\" r=\"45\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><line x1=\"640\" y1=\"140\" x2=\"640\" y2=\"520\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" stroke-dasharray=\"8 8\" />"
+  },
+  {
+   "cue": "As your gaze locks onto",
+   "scene": "custom_svg",
+   "visual_brief": "Pale thin arm slowly lifting upward from dark backseat in deliberate mechanical motion.",
+   "fallback_scene": "hand_reach",
+   "id": "s23",
+   "svg": "<path d=\"M400 500 L 450 320 Q 500 240 640 240 Q 780 240 830 320 L 880 500\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"640\" cy=\"200\" r=\"45\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M600 340 Q 600 220 540 160\" stroke=\"#D2D4D6\" stroke-width=\"6\" fill=\"none\" /><path d=\"M540 160 L 520 140 M540 160 L 550 135 M540 160 L 570 145\" stroke=\"#D2D4D6\" stroke-width=\"2\" fill=\"none\" />"
+  },
+  {
+   "cue": "slowly raises one pale hand",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror view: pale hand waving stiffly from the pitch black rear cabin.",
+   "fallback_scene": "mirror_view",
+   "id": "s24",
+   "svg": "<rect x=\"440\" y=\"200\" width=\"400\" height=\"220\" rx=\"15\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"310\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2\" fill=\"#202328\" /><path d=\"M615 310 L 665 310\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /><path d=\"M640 335 L 640 240 Q 640 200 680 180\" stroke=\"#D2D4D6\" stroke-width=\"4\" fill=\"none\" /><path d=\"M680 180 L 670 165 M680 180 L 690 165 M680 180 L 705 175\" stroke=\"#D2D4D6\" stroke-width=\"2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Its fingers are too long.",
+   "scene": "custom_svg",
+   "visual_brief": "Macro silhouette of waving hand displaying five spider-like, elongated jointed fingers.",
+   "fallback_scene": "hand_reach",
+   "id": "s25",
+   "svg": "<path d=\"M500 450 L 540 280 L 740 280 L 780 450\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M640 280 L 640 120\" stroke=\"#D2D4D6\" stroke-width=\"8\" fill=\"none\" /><path d=\"M640 120 L 580 90 M640 120 L 610 80 M640 120 L 640 75 M640 120 L 670 80 M640 120 L 710 95\" stroke=\"#D2D4D6\" stroke-width=\"2.5\" fill=\"none\" />"
+  },
+  {
+   "cue": "Do not gasp.",
+   "scene": "custom_svg",
+   "visual_brief": "Driver face clamping mouth shut, sweat bead rolling down jawline in instrument glow.",
+   "fallback_scene": "face_protag",
+   "id": "s26",
+   "svg": "<rect x=\"380\" y=\"140\" width=\"520\" height=\"380\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"300\" r=\"110\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"590\" cy=\"270\" r=\"12\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#111111\" /><circle cx=\"690\" cy=\"270\" r=\"12\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#111111\" /><line x1=\"610\" y1=\"350\" x2=\"670\" y2=\"350\" stroke=\"#F2F2F2\" stroke-width=\"4\" /><path d=\"M660 300 Q 670 340 680 370\" stroke=\"#7EC8F2\" stroke-width=\"2\" fill=\"none\" /><path d=\"M480 460 Q 640 430 800 460\" stroke=\"#F2B84B\" stroke-width=\"2\" fill=\"none\" opacity=\"0.6\" />"
+  },
+  {
+   "cue": "Do not jerk the steering",
+   "scene": "custom_svg",
+   "visual_brief": "Two white-knuckled hands gripping leather steering wheel firmly at ten and two positions.",
+   "fallback_scene": "hand_reach",
+   "id": "s27",
+   "svg": "<path d=\"M200,420 L440,320 M1080,420 L840,320\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M440,320 C540,290 740,290 840,320 C890,335 910,380 880,410 C850,440 750,490 640,490 C530,490 430,440 400,410 C370,380 390,335 440,320 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"400\" r=\"80\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M380,360 L450,380 L380,410 M900,360 L830,380 L900,410\" stroke=\"#F2F2F2\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />"
+  },
+  {
+   "cue": "The entity feeds on sudden",
+   "scene": "strike_words",
+   "words": [
+    "DO NOT PANIC",
+    "DO NOT BRAKE",
+    "EYES FRONT"
+   ],
+   "id": "s28",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "If you stare into its",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview perspective: entity torso tilting forward into empty space between front bucket seats.",
+   "fallback_scene": "door_crack",
+   "id": "s29",
+   "svg": "<path d=\"M200,150 L1080,150 L960,550 L320,550 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M580,180 L700,180 L740,450 L540,450 Z\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"640\" cy=\"140\" r=\"45\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"625\" cy=\"135\" r=\"6\" fill=\"#111111\" /><circle cx=\"655\" cy=\"135\" r=\"6\" fill=\"#111111\" /><path d=\"M620,300 C640,320 660,320 680,300\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Force your eyes back down",
+   "scene": "custom_svg",
+   "visual_brief": "POV front windshield: glowing yellow double lines reflecting headlight beams on damp road.",
+   "fallback_scene": "street_lamp",
+   "id": "s30",
+   "svg": "<path d=\"M200,150 L1080,150 L960,550 L320,550 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M610,380 L670,380 L720,550 L560,550 Z\" stroke=\"#F2B84B\" stroke-width=\"3\" fill=\"rgba(242,184,75,0.22)\" /><path d=\"M625,430 L655,430 M618,460 L662,460 M610,490 L670,490\" stroke=\"#F2B84B\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Breathe through your nose.",
+   "scene": "custom_svg",
+   "visual_brief": "Side profile of driver jaw clenched tight, chest expanding slowly in silent control.",
+   "fallback_scene": "face_protag",
+   "id": "s31",
+   "svg": "<path d=\"M350,200 C450,180 550,250 540,380 C530,480 420,520 350,480\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"420\" cy=\"280\" r=\"60\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"#D2D4D6\" /><circle cx=\"440\" cy=\"270\" r=\"5\" fill=\"#111111\" /><path d=\"M435,310 L455,315\" stroke=\"#111111\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M480,340 C520,350 560,400 550,460\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M450,420 C480,440 520,440 550,420\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Keep both hands locked at",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up on steering wheel rim showing tense thumbs pressed hard against textured vinyl.",
+   "fallback_scene": "hand_reach",
+   "id": "s32",
+   "svg": "<path d=\"M340,380 C340,260 460,200 640,200 C820,200 940,260 940,380\" stroke=\"#F2F2F2\" stroke-width=\"6\" fill=\"none\" /><path d=\"M500,320 C540,290 580,310 600,340\" stroke=\"#F2F2F2\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" /><path d=\"M780,320 C740,290 700,310 680,340\" stroke=\"#F2F2F2\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />"
+  },
+  {
+   "cue": "Rule two. Maintain your speed",
+   "scene": "rule_card",
+   "rule_num": 2,
+   "title": "MAINTAIN 50 TO 55 MPH",
+   "danger": false,
+   "id": "s33",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Do not accelerate to escape",
+   "scene": "custom_svg",
+   "visual_brief": "Dashboard speedometer gauge illuminated in amber showing needle trembling near 50 mph.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s34",
+   "svg": "<circle cx=\"640\" cy=\"350\" r=\"160\" stroke=\"#F2F2F2\" stroke-width=\"4\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"350\" r=\"140\" stroke=\"#FF3B30\" stroke-width=\"2\" fill=\"none\" /><path d=\"M640,350 L560,290\" stroke=\"#FF3B30\" stroke-width=\"4\" /><circle cx=\"640\" cy=\"350\" r=\"15\" fill=\"#F2F2F2\" /><text x=\"605\" y=\"240\" fill=\"#F2F2F2\" font-family=\"monospace\" font-size=\"24\">40</text><text x=\"700\" y=\"280\" fill=\"#FF3B30\" font-family=\"monospace\" font-size=\"28\">50</text>"
+  },
+  {
+   "cue": "Do not slow down to",
+   "scene": "custom_svg",
+   "visual_brief": "Exterior low shot of sedan tires spinning smoothly over wet black asphalt without braking.",
+   "fallback_scene": "street_lamp",
+   "id": "s35",
+   "svg": "<path d=\"M200,450 L1080,450 L1120,530 L160,530 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><ellipse cx=\"400\" cy=\"480\" rx=\"60\" ry=\"35\" stroke=\"#F2F2F2\" stroke-width=\"3\" fill=\"#202328\" /><ellipse cx=\"880\" cy=\"480\" rx=\"60\" ry=\"35\" stroke=\"#F2F2F2\" stroke-width=\"3\" fill=\"#202328\" /><path d=\"M250,380 L350,380 L420,450 L200,450 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M830,380 L1030,380 L1080,450 L780,450 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "If your speedometer drops below",
+   "scene": "custom_svg",
+   "visual_brief": "Rear door lock knob suddenly snapping upward inside dark interior with mechanical click.",
+   "fallback_scene": "door_crack",
+   "sfx": "click",
+   "id": "s36",
+   "svg": "<path d=\"M200,200 L1080,200 L1080,520 L200,520 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M630,280 L650,280 L650,420 L630,420 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"640\" cy=\"260\" r=\"15\" stroke=\"#FF3B30\" stroke-width=\"3\" fill=\"#111111\" /><path d=\"M630,220 L650,220 L650,280 L630,280 Z\" stroke=\"#FF3B30\" stroke-width=\"2.2\" fill=\"#FF3B30\" />"
+  },
+  {
+   "cue": "If you exceed fifty-five, your",
+   "scene": "custom_svg",
+   "visual_brief": "POV through windshield plunging into instant pitch black darkness as headlights extinguish.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s37",
+   "svg": "<path d=\"M200,120 L1080,120 L1080,550 L200,550 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#000000\" /><path d=\"M300,500 L640,320 L980,500\" stroke=\"#FF3B30\" stroke-width=\"2.2\" fill=\"none\" opacity=\"0.3\" /><circle cx=\"640\" cy=\"300\" r=\"80\" fill=\"#111111\" stroke=\"#202328\" stroke-width=\"4\" />"
+  },
+  {
+   "cue": "You watch the glowing needle",
+   "scene": "custom_svg",
+   "visual_brief": "Extreme close-up of amber needle hovering precisely between 50 and 55 on vintage gauge.",
+   "fallback_scene": "eye_closeup",
+   "id": "s38",
+   "svg": "<circle cx=\"640\" cy=\"350\" r=\"180\" stroke=\"#F2F2F2\" stroke-width=\"4\" fill=\"#0A101B\" /><path d=\"M640,350 L720,270\" stroke=\"#F2B84B\" stroke-width=\"5\" /><circle cx=\"640\" cy=\"350\" r=\"20\" fill=\"#F2B84B\" /><path d=\"M480,350 C480,260 800,260 800,350\" stroke=\"#F2F2F2\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"10,10\" /><text x=\"610\" y=\"220\" fill=\"#F2B84B\" font-family=\"monospace\" font-size=\"32\">52</text>"
+  },
+  {
+   "cue": "Fifty-two miles per hour.",
+   "scene": "callback_text",
+   "title": "52 MPH",
+   "subtitle": "STABLE SPEED \u2014 DO NOT DRIFT",
+   "danger": false,
+   "id": "s39",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Your knuckles are white against",
+   "scene": "custom_svg",
+   "visual_brief": "Driver hands clamped on steering wheel, tendons stark and white under green dashboard glow.",
+   "fallback_scene": "hand_reach",
+   "id": "s40",
+   "svg": "<ellipse cx=\"640\" cy=\"560\" rx=\"290\" ry=\"160\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"22\" /><ellipse cx=\"640\" cy=\"560\" rx=\"270\" ry=\"140\" fill=\"none\" stroke=\"#111111\" stroke-width=\"4\" /><ellipse cx=\"640\" cy=\"490\" rx=\"180\" ry=\"50\" fill=\"rgba(74,222,128,0.06)\" /><path d=\"M480,480 C470,440 460,370 480,330 C495,300 535,305 545,340 C550,360 550,420 540,480\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M495,350 L495,440 M515,340 L515,445 M530,355 L530,430\" stroke=\"#FFFFFF\" stroke-width=\"2.5\" stroke-linecap=\"round\" /><circle cx=\"495\" cy=\"340\" r=\"8\" fill=\"#FFFFFF\" /><circle cx=\"515\" cy=\"330\" r=\"8\" fill=\"#FFFFFF\" /><circle cx=\"532\" cy=\"345\" r=\"8\" fill=\"#FFFFFF\" /><path d=\"M800,480 C810,440 820,370 800,330 C785,300 745,305 735,340 C730,360 730,420 740,480\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M785,350 L785,440 M765,340 L765,445 M750,355 L750,430\" stroke=\"#FFFFFF\" stroke-width=\"2.5\" stroke-linecap=\"round\" /><circle cx=\"785\" cy=\"340\" r=\"8\" fill=\"#FFFFFF\" /><circle cx=\"765\" cy=\"330\" r=\"8\" fill=\"#FFFFFF\" /><circle cx=\"748\" cy=\"345\" r=\"8\" fill=\"#FFFFFF\" /><path d=\"M570,490 Q640,470 710,490\" stroke=\"#4ADE80\" stroke-width=\"2\" fill=\"none\" opacity=\"0.7\" />"
+  },
+  {
+   "cue": "From the darkness behind you",
+   "scene": "door_crack",
+   "visual_brief": "Shadowy fold of heavy wool coat rustling in backseat footwell behind passenger seat.",
+   "fallback_scene": "door_crack",
+   "sfx": "creak",
+   "id": "s41"
+  },
+  {
+   "cue": "It smells like wet wool,",
+   "scene": "custom_svg",
+   "visual_brief": "Driver nostrils flaring in disgust, breath misting softly in freezing cabin air.",
+   "fallback_scene": "face_protag",
+   "id": "s42",
+   "svg": "<path d=\"M520,130 C460,130 430,220 430,300 C430,380 470,430 540,450 L560,540\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M430,270 L380,330 L430,350\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M420,335 C410,335 405,345 415,350 C425,355 435,345 420,335 Z\" fill=\"#111111\" /><path d=\"M430,375 C410,385 410,400 425,405 C440,408 445,395 435,380 Z\" fill=\"#111111\" /><ellipse cx=\"445\" cy=\"280\" rx=\"8\" ry=\"12\" fill=\"#111111\" /><path d=\"M435,260 Q455,255 470,265\" stroke=\"#111111\" stroke-width=\"3\" fill=\"none\" /><path d=\"M390,345 C340,330 310,350 260,320 C220,295 240,260 200,240\" stroke=\"rgba(242,242,242,0.35)\" stroke-width=\"10\" stroke-linecap=\"round\" fill=\"none\" /><path d=\"M390,345 C350,335 320,360 280,340\" stroke=\"rgba(242,242,242,0.2)\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\" />"
+  },
+  {
+   "cue": "The backseat cushion creaks as",
+   "scene": "custom_svg",
+   "visual_brief": "Leather upholstery depressing slowly under invisible heavy weight behind driver seat.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s43",
+   "svg": "<path d=\"M340,160 L480,160 L460,420 L320,420 Z\" fill=\"none\" stroke=\"#4B505A\" stroke-width=\"2\" /><path d=\"M240,420 L1040,420 L980,530 L180,530 Z\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M480,420 C560,420 580,470 660,470 C740,470 760,420 840,420\" stroke=\"#F2F2F2\" stroke-width=\"3\" fill=\"none\" /><ellipse cx=\"660\" cy=\"465\" rx=\"110\" ry=\"35\" fill=\"rgba(0,0,0,0.7)\" stroke=\"#4B505A\" stroke-width=\"1.5\" /><path d=\"M560,440 L600,460 M760,440 L720,460\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" fill=\"none\" /><path d=\"M610,470 L660,485 L710,470\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" fill=\"none\" /><path d=\"M590,430 Q660,445 730,430\" stroke=\"#F2F2F2\" stroke-width=\"1.2\" fill=\"none\" opacity=\"0.5\" />"
+  },
+  {
+   "cue": "Keep driving.",
+   "scene": "custom_svg",
+   "visual_brief": "POV road rushing forward beneath headlights, trees blurring into ominous black walls.",
+   "fallback_scene": "street_lamp",
+   "bubble": "Keep driving",
+   "id": "s44",
+   "svg": "<polygon points=\"635,320 645,320 1020,560 260,560\" fill=\"#080A0E\" stroke=\"none\" /><line x1=\"640\" y1=\"320\" x2=\"260\" y2=\"560\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"640\" y1=\"320\" x2=\"1020\" y2=\"560\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><polygon points=\"638,320 642,320 840,560 440,560\" fill=\"rgba(242,184,75,0.12)\" /><line x1=\"640\" y1=\"340\" x2=\"640\" y2=\"370\" stroke=\"#F2B84B\" stroke-width=\"3\" /><line x1=\"640\" y1=\"400\" x2=\"640\" y2=\"450\" stroke=\"#F2B84B\" stroke-width=\"4\" /><line x1=\"640\" y1=\"490\" x2=\"640\" y2=\"560\" stroke=\"#F2B84B\" stroke-width=\"5\" /><path d=\"M100,140 L280,320 L240,560 L80,560 Z\" fill=\"#15181C\" stroke=\"#353A42\" stroke-width=\"2\" /><path d=\"M1180,140 L1000,320 L1040,560 L1200,560 Z\" fill=\"#15181C\" stroke=\"#353A42\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "Do not let your right",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up of foot in worn boot pressing accelerator pedal with rigid, trembling discipline.",
+   "fallback_scene": "hand_reach",
+   "id": "s45",
+   "svg": "<line x1=\"450\" y1=\"530\" x2=\"830\" y2=\"530\" stroke=\"#F2F2F2\" stroke-width=\"2\" /><line x1=\"740\" y1=\"260\" x2=\"700\" y2=\"440\" stroke=\"#F2F2F2\" stroke-width=\"4\" /><rect x=\"670\" y=\"420\" width=\"35\" height=\"80\" rx=\"6\" transform=\"rotate(35 685 460)\" fill=\"#202328\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M460,200 L560,330 L540,430 L690,470 L700,500 L500,500 C470,500 460,470 460,430 Z\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"540\" y1=\"420\" x2=\"670\" y2=\"460\" stroke=\"#111111\" stroke-width=\"2\" /><path d=\"M680,450 L715,445 M690,480 L725,475\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><path d=\"M470,180 L490,210 M440,210 L460,240\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" opacity=\"0.5\" />"
+  },
+  {
+   "cue": "The engine hums a low,",
+   "scene": "custom_svg",
+   "visual_brief": "Vibrating car hood viewed from driver seat, engine heat warping chilly night air.",
+   "fallback_scene": "window_outside",
+   "sfx": "buzz",
+   "id": "s46",
+   "svg": "<path d=\"M200,480 L380,320 L900,320 L1080,480 Z\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"640\" y1=\"320\" x2=\"640\" y2=\"480\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><line x1=\"520\" y1=\"320\" x2=\"440\" y2=\"480\" stroke=\"#F2F2F2\" stroke-width=\"1.2\" /><line x1=\"760\" y1=\"320\" x2=\"840\" y2=\"480\" stroke=\"#F2F2F2\" stroke-width=\"1.2\" /><path d=\"M420,290 Q440,260 420,230 Q400,200 430,170\" stroke=\"rgba(242,242,242,0.4)\" stroke-width=\"2\" fill=\"none\" /><path d=\"M640,290 Q660,250 635,220 Q610,180 645,150\" stroke=\"rgba(242,242,242,0.4)\" stroke-width=\"2\" fill=\"none\" /><path d=\"M860,290 Q880,260 860,230 Q840,200 870,170\" stroke=\"rgba(242,242,242,0.4)\" stroke-width=\"2\" fill=\"none\" /><line x1=\"190\" y1=\"485\" x2=\"1090\" y2=\"485\" stroke=\"#F2F2F2\" stroke-width=\"3\" />"
+  },
+  {
+   "cue": "It is the only sound",
+   "scene": "custom_svg",
+   "visual_brief": "Wide silhouette inside car cabin: driver in front, still ominous shape seated in back.",
+   "fallback_scene": "house_cutaway",
+   "id": "s47",
+   "svg": "<path d=\"M160,180 L1120,180 L1180,520 L100,520 Z\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"640\" y1=\"180\" x2=\"640\" y2=\"520\" stroke=\"#353A42\" stroke-width=\"2\" /><circle cx=\"380\" cy=\"270\" r=\"45\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2\" /><path d=\"M310,500 C310,380 450,380 450,500 Z\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"900\" cy=\"260\" r=\"50\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2\" /><path d=\"M810,500 C810,360 990,360 990,500 Z\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"880\" cy=\"255\" r=\"4\" fill=\"#FFFFFF\" opacity=\"0.8\" /><circle cx=\"915\" cy=\"255\" r=\"4\" fill=\"#FFFFFF\" opacity=\"0.8\" />"
+  },
+  {
+   "cue": "Rule three. Never adjust the",
+   "scene": "rule_card",
+   "rule_num": 3,
+   "title": "NEVER ADJUST THE MIRROR",
+   "danger": false,
+   "id": "s48",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Your instinct screams at you",
+   "scene": "custom_svg",
+   "visual_brief": "Driver trembling right hand reaching out toward center rearview mirror, then freezing midair.",
+   "fallback_scene": "hand_reach",
+   "id": "s49",
+   "svg": "<rect x=\"520\" y=\"110\" width=\"240\" height=\"70\" rx=\"10\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"640\" y1=\"110\" x2=\"640\" y2=\"90\" stroke=\"#F2F2F2\" stroke-width=\"3\" /><path d=\"M420,530 C450,420 540,320 590,260 L620,290 C570,360 520,440 500,530 Z\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"2\" /><circle cx=\"605\" cy=\"245\" r=\"9\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><circle cx=\"625\" cy=\"252\" r=\"8\" fill=\"#D2D4D6\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><line x1=\"635\" y1=\"230\" x2=\"645\" y2=\"220\" stroke=\"#F2F2F2\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\"0.6\" /><line x1=\"615\" y1=\"215\" x2=\"620\" y2=\"200\" stroke=\"#F2F2F2\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\"0.6\" />"
+  },
+  {
+   "cue": "You want to hide that",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up of rearview mirror showing corner of smiling mouth floating in deep rear gloom.",
+   "fallback_scene": "mirror_view",
+   "id": "s50",
+   "svg": "<rect x=\"280\" y=\"160\" width=\"720\" height=\"280\" rx=\"24\" fill=\"#080A0E\" stroke=\"#F2F2F2\" stroke-width=\"3\" /><line x1=\"640\" y1=\"160\" x2=\"640\" y2=\"90\" stroke=\"#F2F2F2\" stroke-width=\"4\" /><ellipse cx=\"440\" cy=\"350\" rx=\"90\" ry=\"70\" fill=\"#D2D4D6\" opacity=\"0.3\" /><path d=\"M740,220 C680,220 650,280 650,370 L950,370 C950,280 900,220 740,220 Z\" fill=\"#181B20\" stroke=\"#353A42\" stroke-width=\"2\" /><path d=\"M700,320 Q750,370 820,310\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-linecap=\"round\" /><path d=\"M700,320 Q750,345 820,310 Z\" fill=\"#111111\" /><line x1=\"820\" y1=\"310\" x2=\"835\" y2=\"295\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" />"
+  },
+  {
+   "cue": "Do not touch the tab.",
+   "scene": "door_crack",
+   "visual_brief": "Extreme close-up of plastic day/night flip tab on bottom of rearview mirror.",
+   "fallback_scene": "door_crack",
+   "id": "s51"
+  },
+  {
+   "cue": "The index card warns that",
+   "scene": "notepad_rules",
+   "title": "WARNING: MIRROR TAB",
+   "show_q7": false,
+   "rule_text": "THE GLASS IS AN ANCHOR. DO NOT TILT.",
+   "id": "s52",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "It is an anchor holding",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror reflecting the passenger framed inside glass like a trapped portrait.",
+   "fallback_scene": "mirror_view",
+   "id": "s53",
+   "svg": "<rect x=\"440\" y=\"160\" width=\"400\" height=\"240\" rx=\"15\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"240\" r=\"40\" fill=\"#D2D4D6\" /><path d=\"M620 235 Q640 225 660 235\" stroke=\"#111\" stroke-width=\"2\" fill=\"none\" /><rect x=\"580\" y=\"290\" width=\"120\" height=\"80\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "If you tilt the mirror",
+   "scene": "custom_svg",
+   "visual_brief": "Conceptual visual: shattered reflection line spilling out of mirror glass into front cabin.",
+   "fallback_scene": "stairs_creak",
+   "id": "s54",
+   "svg": "<rect x=\"480\" y=\"180\" width=\"320\" height=\"180\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><path d=\"M500 320 L600 240 L680 340 L780 200\" stroke=\"#FF3B30\" stroke-width=\"2.5\" fill=\"none\" /><path d=\"M600 240 L550 480 M680 340 L720 500\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" stroke-dasharray=\"6 6\" />"
+  },
+  {
+   "cue": "The passenger will no longer",
+   "scene": "custom_svg",
+   "visual_brief": "Dark shadowy arm reaching from rear compartment between front bucket seats toward shifter.",
+   "fallback_scene": "hand_reach",
+   "id": "s55",
+   "svg": "<path d=\"M500 200 L780 200 L740 500 L540 500 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M300 400 Q450 380 580 420\" stroke=\"#202328\" stroke-width=\"35\" fill=\"none\" /><path d=\"M550 410 Q600 415 630 430\" stroke=\"#4B505A\" stroke-width=\"3\" fill=\"none\" /><circle cx=\"630\" cy=\"430\" r=\"8\" fill=\"#D2D4D6\" />"
+  },
+  {
+   "cue": "At two twenty-two, the",
+   "scene": "clock_led",
+   "clock": "2:22",
+   "id": "s56",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "silhouette moves in your peripheral",
+   "scene": "custom_svg",
+   "visual_brief": "Driver side eye catching slow dark movement in upper right corner of vision.",
+   "fallback_scene": "eye_closeup",
+   "id": "s57",
+   "svg": "<ellipse cx=\"250\" cy=\"350\" rx=\"80\" ry=\"50\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"250\" cy=\"350\" r=\"25\" fill=\"#D2D4D6\" /><circle cx=\"255\" cy=\"345\" r=\"6\" fill=\"#111\" /><path d=\"M1000 120 L1150 180 L1150 280 L1000 280 Z\" stroke=\"#4B505A\" stroke-width=\"2\" fill=\"#202328\" /><circle cx=\"1075\" cy=\"200\" r=\"15\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "Its head straightens.",
+   "scene": "mirror_view",
+   "visual_brief": "Rearview mirror view: passenger head snapping erect to center with sickening precision.",
+   "fallback_scene": "mirror_view",
+   "sfx": "creak",
+   "id": "s58"
+  },
+  {
+   "cue": "Its chin rises.",
+   "scene": "custom_svg",
+   "visual_brief": "Backseat shadow lifting face upward, exposing pale throat and smooth nose-less skin.",
+   "fallback_scene": "face_uncanny",
+   "id": "s59",
+   "svg": "<rect x=\"440\" y=\"200\" width=\"400\" height=\"300\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M500 450 Q640 320 780 450\" stroke=\"#202328\" stroke-width=\"60\" fill=\"#202328\" /><circle cx=\"640\" cy=\"280\" r=\"50\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2\" /><path d=\"M620 340 L660 340 L650 420 L630 420 Z\" fill=\"#D2D4D6\" />"
+  },
+  {
+   "cue": "The cold air in the",
+   "scene": "custom_svg",
+   "visual_brief": "Frost crystals suddenly spreading across interior side window glass in sharp white veins.",
+   "fallback_scene": "window_outside",
+   "id": "s60",
+   "svg": "<path d=\"M200 150 L500 120 L520 480 L200 480 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M220 180 L350 250 L280 320 L450 400\" stroke=\"#F2F2F2\" stroke-width=\"1.8\" fill=\"none\" /><path d=\"M350 250 L420 200 M280 320 L380 310\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" fill=\"none\" />"
+  },
+  {
+   "cue": "Your breath turns to thick",
+   "scene": "custom_svg",
+   "visual_brief": "Driver mouth exhaling plume of dense white vapor into frozen steering column glow.",
+   "fallback_scene": "face_protag",
+   "id": "s61",
+   "svg": "<circle cx=\"300\" cy=\"360\" r=\"40\" fill=\"#D2D4D6\" /><circle cx=\"290\" cy=\"350\" r=\"6\" fill=\"#111\" /><path d=\"M310 370 Q320 380 330 370\" stroke=\"#111\" stroke-width=\"2\" fill=\"none\" /><path d=\"M335 375 Q400 370 480 330 Q520 310 580 340\" stroke=\"#F2F2F2\" stroke-width=\"4\" fill=\"none\" opacity=\"0.6\" stroke-dasharray=\"8 4\" /><path d=\"M600 450 L750 450 L700 520 Z\" stroke=\"#F2B84B\" stroke-width=\"2\" fill=\"rgba(242,184,75,0.2)\" />"
+  },
+  {
+   "cue": "In the reflection, its mouth",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror: unnaturally wide mouth stretched open with dark vertical stitches.",
+   "fallback_scene": "face_uncanny",
+   "sfx": "sting",
+   "id": "s62",
+   "svg": "<rect x=\"480\" y=\"180\" width=\"320\" height=\"180\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"260\" r=\"50\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2\" /><ellipse cx=\"640\" cy=\"285\" rx=\"25\" ry=\"18\" fill=\"#111\" /><path d=\"M625 285 L625 295 M635 282 L635 298 M645 282 L645 298 M655 285 L655 295\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" />"
+  },
+  {
+   "cue": "It waves again, slow and",
+   "scene": "custom_svg",
+   "visual_brief": "Pale long-fingered hand waving from side to side in slow mechanical hypnotic sweep.",
+   "fallback_scene": "hand_reach",
+   "id": "s63",
+   "svg": "<path d=\"M500 360 C500 280 540 240 600 240 C660 240 700 280 700 360 L700 520 L500 520 Z\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M550 480 C580 440 620 440 650 480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M580 200 C580 140 590 120 600 120 C610 120 620 140 620 200\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"280\" r=\"60\" fill=\"#D2D4D6\" /><path d=\"M625 270 Q635 260 645 270\" stroke=\"#111111\" stroke-width=\"3\" fill=\"none\" /><path d=\"M670 230 C740 220 780 280 760 340\" stroke=\"#D2D4D6\" stroke-width=\"12\" stroke-linecap=\"round\" fill=\"none\" /><path d=\"M740 270 L770 240 M750 290 L790 270 M730 310 L770 310\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" stroke-linecap=\"round\" fill=\"none\" /><path d=\"M300 200 L980 200 L1100 520 L180 520 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "like a child waving goodbye",
+   "scene": "custom_svg",
+   "visual_brief": "Old vintage silhouette memory style: child waving from back window of departing steam car.",
+   "fallback_scene": "window_outside",
+   "id": "s64",
+   "svg": "<rect x=\"350\" y=\"180\" width=\"580\" height=\"300\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><line x1=\"640\" y1=\"180\" x2=\"640\" y2=\"480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"350\" y1=\"330\" x2=\"930\" y2=\"330\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"495\" cy=\"260\" r=\"25\" fill=\"#D2D4D6\" /><path d=\"M485 300 L505 300 L515 360 L475 360 Z\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2\" /><path d=\"M515 280 C540 270 550 250 540 230\" stroke=\"#D2D4D6\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\" /><path d=\"M200 480 L1080 480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "Ignore it.",
+   "scene": "strike_words",
+   "words": [
+    "LOOK AWAY",
+    "DO NOT WAVE",
+    "LOOK AHEAD"
+   ],
+   "id": "s65",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Stare straight through the fog.",
+   "scene": "custom_svg",
+   "visual_brief": "Driver eyes locked straight ahead with intense fierce determination into dense white fog.",
+   "fallback_scene": "face_protag",
+   "id": "s66",
+   "svg": "<circle cx=\"520\" cy=\"300\" r=\"35\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"760\" cy=\"300\" r=\"35\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"520\" cy=\"300\" r=\"12\" fill=\"#F2F2F2\" /><circle cx=\"760\" cy=\"300\" r=\"12\" fill=\"#F2F2F2\" /><path d=\"M150 220 L1130 220 L1050 480 L230 480 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M300 380 Q640 420 980 380\" stroke=\"#FFFFFF\" stroke-width=\"4\" stroke-dasharray=\"20 15\" fill=\"none\" opacity=\"0.6\" />"
+  },
+  {
+   "cue": "Rule four. If the radio",
+   "scene": "rule_card",
+   "rule_num": 4,
+   "title": "DO NOT TOUCH RADIO",
+   "danger": false,
+   "id": "s67",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "A sharp click echoes through",
+   "scene": "custom_svg",
+   "visual_brief": "Car radio knob spontaneously turning itself a fraction of an inch in dashboard slot.",
+   "fallback_scene": "door_crack",
+   "sfx": "click",
+   "id": "s68",
+   "svg": "<rect x=\"440\" y=\"220\" width=\"400\" height=\"260\" rx=\"15\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"350\" r=\"70\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"350\" r=\"55\" stroke=\"#4B505A\" stroke-width=\"2\" fill=\"none\" /><line x1=\"640\" y1=\"350\" x2=\"640\" y2=\"290\" stroke=\"#FF3B30\" stroke-width=\"4\" stroke-linecap=\"round\" /><path d=\"M680 320 A 50 50 0 0 1 700 370\" stroke=\"#F2B84B\" stroke-width=\"4\" fill=\"none\" />"
+  },
+  {
+   "cue": "The audio display flickers from",
+   "scene": "callback_text",
+   "title": "FM 91.3",
+   "subtitle": "FREQUENCY ACTIVE",
+   "danger": false,
+   "id": "s69",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Static hiss fills the cabin,",
+   "scene": "custom_svg",
+   "visual_brief": "Perforated speaker grill in car door panel vibrating as white noise pours into car.",
+   "fallback_scene": "hallway_view",
+   "sfx": "buzz",
+   "id": "s70",
+   "svg": "<rect x=\"340\" y=\"200\" width=\"600\" height=\"280\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><line x1=\"380\" y1=\"260\" x2=\"500\" y2=\"260\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"380\" y1=\"280\" x2=\"480\" y2=\"280\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"380\" y1=\"300\" x2=\"520\" y2=\"300\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M580 240 Q610 280 580 320 T580 400\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M620 230 Q660 280 620 330 T620 420\" stroke=\"#F2B84B\" stroke-width=\"2.2\" fill=\"none\" opacity=\"0.7\" /><path d=\"M660 250 Q620 290 660 340 T660 410\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "It is coming through all",
+   "scene": "custom_svg",
+   "visual_brief": "Car interior overhead view showing sound waves radiating from four corner speakers.",
+   "fallback_scene": "house_cutaway",
+   "id": "s71",
+   "svg": "<rect x=\"390\" y=\"180\" width=\"500\" height=\"320\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"340\" r=\"40\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"430\" cy=\"220\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"850\" cy=\"220\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"430\" cy=\"460\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"850\" cy=\"460\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M455 235 L590 305\" stroke=\"#F2B84B\" stroke-width=\"2\" stroke-dasharray=\"6 6\" fill=\"none\" /><path d=\"M825 235 L690 305\" stroke=\"#F2B84B\" stroke-width=\"2\" stroke-dasharray=\"6 6\" fill=\"none\" /><path d=\"M455 445 L590 375\" stroke=\"#F2B84B\" stroke-width=\"2\" stroke-dasharray=\"6 6\" fill=\"none\" /><path d=\"M825 445 L690 375\" stroke=\"#F2B84B\" stroke-width=\"2\" stroke-dasharray=\"6 6\" fill=\"none\" />"
+  },
+  {
+   "cue": "Then, a child\u2019s voice speaks",
+   "scene": "custom_svg",
+   "visual_brief": "Center dash radio display glowing blood red as static wave forms flutter on screen.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s72",
+   "svg": "<rect x=\"420\" y=\"220\" width=\"440\" height=\"240\" rx=\"10\" stroke=\"#FF3B30\" stroke-width=\"2.2\" fill=\"#1a0505\" /><path d=\"M460 340 Q 520 280, 580 340 T 700 340 T 820 340\" stroke=\"#FF3B30\" stroke-width=\"3\" fill=\"none\" /><text x=\"640\" y=\"280\" font-family=\"monospace\" font-size=\"24\" fill=\"#FF3B30\" text-anchor=\"middle\">89.9 MHz</text>"
+  },
+  {
+   "cue": "Are we home yet?",
+   "scene": "custom_svg",
+   "visual_brief": "Windshield perspective as fog swirls in ghostly childlike shapes against headlights.",
+   "fallback_scene": "window_outside",
+   "bubble": "Are we home yet?",
+   "id": "s73",
+   "svg": "<path d=\"M200 200 L1080 200 L980 500 L300 500 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M540 320 C540 280 570 260 600 280 C630 300 650 280 670 310 C690 340 660 380 620 370 C580 360 540 360 540 320 Z\" fill=\"#4B505A\" opacity=\"0.4\" /><circle cx=\"600\" cy=\"330\" r=\"10\" fill=\"#111111\" /><circle cx=\"640\" cy=\"335\" r=\"10\" fill=\"#111111\" />"
+  },
+  {
+   "cue": "Your skin prickles with cold",
+   "scene": "custom_svg",
+   "visual_brief": "Driver arm hair standing on end, beads of cold sweat shining in dash illumination.",
+   "fallback_scene": "face_protag",
+   "id": "s74",
+   "svg": "<path d=\"M350 480 C350 350 450 300 640 300 C830 300 930 350 930 480\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M580 350 L570 330 M600 340 L595 320 M620 345 L625 325 M640 345 L650 325\" stroke=\"#F2F2F2\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\" /><circle cx=\"680\" cy=\"380\" r=\"3\" fill=\"#7EC8F2\" /><circle cx=\"630\" cy=\"370\" r=\"2\" fill=\"#7EC8F2\" />"
+  },
+  {
+   "cue": "The index card is absolute",
+   "scene": "notepad_rules",
+   "title": "RADIO OVERRIDE",
+   "show_q7": false,
+   "rule_text": "DO NOT MUTE. LET IT BROADCAST.",
+   "id": "s75",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Do not touch the power",
+   "scene": "custom_svg",
+   "visual_brief": "Driver index finger hovering inches away from radio power button, shaking violently.",
+   "fallback_scene": "hand_reach",
+   "id": "s76",
+   "svg": "<path d=\"M200 520 L500 520 L640 380 L800 520 L1080 520\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"540\" y=\"280\" width=\"200\" height=\"120\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><circle cx=\"640\" cy=\"340\" r=\"25\" stroke=\"#FF3B30\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M400 520 C420 450 460 400 520 370\" stroke=\"#D2D4D6\" stroke-width=\"12\" stroke-linecap=\"round\" fill=\"none\" /><line x1=\"510\" y1=\"360\" x2=\"545\" y2=\"360\" stroke=\"#F2F2F2\" stroke-width=\"4\" stroke-linecap=\"round\" />"
+  },
+  {
+   "cue": "Do not lower the volume.",
+   "scene": "custom_svg",
+   "visual_brief": "Volume dial at number six, bathed in eerie red LED light.",
+   "fallback_scene": "door_crack",
+   "id": "s77",
+   "svg": "<rect x=\"540\" y=\"300\" width=\"200\" height=\"120\" rx=\"15\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"360\" r=\"40\" fill=\"none\" stroke=\"#FF3B30\" stroke-width=\"3\" /><line x1=\"640\" y1=\"360\" x2=\"665\" y2=\"335\" stroke=\"#FF3B30\" stroke-width=\"3\" /><text x=\"640\" y=\"330\" fill=\"#FF3B30\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\">06</text><path d=\"M560 250 Q640 220 720 250\" fill=\"none\" stroke=\"#FF3B30\" stroke-width=\"2\" opacity=\"0.4\" />"
+  },
+  {
+   "cue": "The broadcast is a frequency",
+   "scene": "custom_svg",
+   "visual_brief": "Electrical arcs faintly sparking along windshield defroster filaments in the cold.",
+   "fallback_scene": "window_outside",
+   "id": "s78",
+   "svg": "<path d=\"M200 200 L1080 200 L1150 500 L130 500 Z\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"250\" y1=\"250\" x2=\"1030\" y2=\"250\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><line x1=\"230\" y1=\"300\" x2=\"1050\" y2=\"300\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><line x1=\"210\" y1=\"350\" x2=\"1070\" y2=\"350\" stroke=\"#F2F2F2\" stroke-width=\"1.5\" /><path d=\"M300 250 l20 -15 l20 30 l20 -30 l20 15\" fill=\"none\" stroke=\"#F2B84B\" stroke-width=\"2\" /><path d=\"M700 300 l15 -20 l20 40 l20 -40 l15 20\" fill=\"none\" stroke=\"#F2B84B\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "The passenger is tuning your",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror view: passenger open stitched mouth pulsing in time with static rhythm.",
+   "fallback_scene": "face_uncanny",
+   "id": "s79",
+   "svg": "<path d=\"M440 180 L840 180 L900 520 L380 520 Z\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M540 250 Q640 200 740 250 Q780 350 740 450 Q640 480 540 450 Q500 350 540 250 Z\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><ellipse cx=\"640\" cy=\"350\" rx=\"80\" ry=\"40\" fill=\"#111111\" stroke=\"#FF3B30\" stroke-width=\"2\" /><line x1=\"580\" y1=\"350\" x2=\"700\" y2=\"350\" stroke=\"#F2F2F2\" stroke-width=\"2\" /><line x1=\"610\" y1=\"335\" x2=\"610\" y2=\"365\" stroke=\"#F2F2F2\" stroke-width=\"2\" /><line x1=\"670\" y1=\"335\" x2=\"670\" y2=\"365\" stroke=\"#F2F2F2\" stroke-width=\"2\" />"
+  },
+  {
+   "cue": "If you mute the audio,",
+   "scene": "custom_svg",
+   "visual_brief": "Creepy close-up of pale nose-less face looming directly beside driver left ear rest.",
+   "fallback_scene": "face_shadow",
+   "sfx": "sting",
+   "id": "s80",
+   "svg": "<path d=\"M300 150 L500 550\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"750\" cy=\"300\" r=\"90\" fill=\"#D2D4D6\" /><circle cx=\"720\" cy=\"280\" r=\"8\" fill=\"#111111\" /><path d=\"M735 320 Q750 330 765 320\" fill=\"none\" stroke=\"#111111\" stroke-width=\"3\" /><path d=\"M200 380 Q350 360 450 420\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "Let the static play.",
+   "scene": "custom_svg",
+   "visual_brief": "Driver staring forward stoically while static hiss visualizes as dancing white speckles.",
+   "fallback_scene": "face_protag",
+   "id": "s81",
+   "svg": "<circle cx=\"500\" cy=\"320\" r=\"50\" fill=\"#D2D4D6\" /><circle cx=\"485\" cy=\"310\" r=\"6\" fill=\"#111111\" /><circle cx=\"515\" cy=\"310\" r=\"6\" fill=\"#111111\" /><path d=\"M495\" y=\"340\" q=\"5\" x=\"5\" y2=\"340\" fill=\"none\" stroke=\"#111111\" stroke-width=\"2.5\" /><line x1=\"500\" y1=\"370\" x2=\"500\" y2=\"480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"350\" cy=\"200\" r=\"2\" fill=\"#F2F2F2\" /><circle cx=\"750\" cy=\"150\" r=\"2\" fill=\"#F2F2F2\" /><circle cx=\"250\" cy=\"450\" r=\"2\" fill=\"#F2F2F2\" /><circle cx=\"900\" cy=\"350\" r=\"2\" fill=\"#F2F2F2\" /><circle cx=\"650\" cy=\"500\" r=\"2\" fill=\"#F2F2F2\" />"
+  },
+  {
+   "cue": "The child's voice repeats the",
+   "scene": "custom_svg",
+   "visual_brief": "Radio display flickering wildly between static numbers 91.3, 00.0, 49.0.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s82",
+   "svg": "<rect x=\"440\" y=\"240\" width=\"400\" height=\"200\" rx=\"20\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><text x=\"640\" y=\"365\" fill=\"#FF3B30\" font-family=\"monospace\" font-size=\"64\" text-anchor=\"middle\" font-weight=\"bold\">91.3</text><path d=\"M480 200 L520 280 L560 200 L600 280\" fill=\"none\" stroke=\"#F2B84B\" stroke-width=\"2\" opacity=\"0.6\" />"
+  },
+  {
+   "cue": "until it becomes a rasping",
+   "scene": "custom_svg",
+   "visual_brief": "Rear passenger shadow throat expanding and convulsing as deep adult rasp vibrates cabin.",
+   "fallback_scene": "face_uncanny",
+   "id": "s83",
+   "svg": "<path d=\"M400 150 Q640 100 880 150 Q950 350 880 500 Q640 550 400 500 Q330 350 400 150 Z\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><path d=\"M500 420 Q640 480 780 420 Q700 530 580 530 Z\" fill=\"#111111\" stroke=\"#FF3B30\" stroke-width=\"2\" /><line x1=\"640\" y1=\"300\" x2=\"640\" y2=\"450\" stroke=\"#FF3B30\" stroke-width=\"4\" stroke-dasharray=\"10,10\" />"
+  },
+  {
+   "cue": "Are we home yet? Keep",
+   "scene": "custom_svg",
+   "visual_brief": "Driver teeth gritted hard, hands white on steering wheel through the deafening voice.",
+   "fallback_scene": "face_protag",
+   "bubble": "ARE WE HOME YET?",
+   "id": "s84",
+   "svg": "<circle cx=\"500\" cy=\"320\" r=\"50\" fill=\"#D2D4D6\" /><circle cx=\"485\" cy=\"310\" r=\"6\" fill=\"#111111\" /><circle cx=\"515\" cy=\"310\" r=\"6\" fill=\"#111111\" /><path d=\"M480 345 Q500 335 520 345\" fill=\"none\" stroke=\"#111111\" stroke-width=\"3\" /><path d=\"M380 480 L480 400 L520 400 L620 480\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"480\" cy=\"410\" r=\"15\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"520\" cy=\"410\" r=\"15\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "Fifty-three miles per hour.",
+   "scene": "callback_text",
+   "title": "53 MPH",
+   "subtitle": "STAY IN RANGE",
+   "danger": false,
+   "id": "s85",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "The road ahead is completely",
+   "scene": "custom_svg",
+   "visual_brief": "POV front window: long empty strip of fog-choked asphalt disappearing into black void.",
+   "fallback_scene": "street_lamp",
+   "id": "s86",
+   "svg": "<polygon points=\"640,250 500,550 780,550\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"640\" y1=\"400\" x2=\"640\" y2=\"550\" stroke=\"#F2F2F2\" stroke-width=\"2\" stroke-dasharray=\"20,20\" /><ellipse cx=\"640\" cy=\"520\" rx=\"250\" ry=\"40\" fill=\"#0A101B\" opacity=\"0.7\" />"
+  },
+  {
+   "cue": "Rule five. If a vehicle",
+   "scene": "rule_card",
+   "rule_num": 5,
+   "title": "DO NOT SIGNAL TAILGATERS",
+   "danger": false,
+   "id": "s87",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "At two twenty-eight, bright",
+   "scene": "clock_led",
+   "clock": "2:28",
+   "id": "s88",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "white light floods your interior.",
+   "scene": "custom_svg",
+   "visual_brief": "Blinding white light bursting through car rear windshield, illuminating driver headrest in stark white.",
+   "fallback_scene": "window_outside",
+   "sfx": "sting",
+   "id": "s89",
+   "svg": "<path d=\"M150 120 L1130 120 L1200 600 L80 600 Z\" fill=\"#FFFFFF\" opacity=\"0.9\" /><path d=\"M300 200 L980 200 L1020 520 L260 520 Z\" fill=\"none\" stroke=\"#111111\" stroke-width=\"4\" /><circle cx=\"640\" cy=\"350\" r=\"80\" fill=\"#111111\" /><path d=\"M580 320 Q640 280 700 320\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" />"
+  },
+  {
+   "cue": "In your side mirrors, twin",
+   "scene": "custom_svg",
+   "visual_brief": "Driver side exterior mirror reflecting two searing halogen round headlights creeping close.",
+   "fallback_scene": "mirror_view",
+   "id": "s90",
+   "svg": "<g><rect x=\"150\" y=\"120\" width=\"400\" height=\"380\" rx=\"20\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M200 160 C 250 160, 300 180, 300 250 L 300 400\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><ellipse cx=\"850\" cy=\"300\" rx=\"70\" ry=\"110\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"830\" cy=\"270\" r=\"25\" fill=\"#F2B84B\" opacity=\"0.9\" /><circle cx=\"870\" cy=\"270\" r=\"25\" fill=\"#F2B84B\" opacity=\"0.9\" /><path d=\"M810 270 L 600 270 M 810 320 L 600 300\" stroke=\"#F2B84B\" stroke-width=\"1.5\" opacity=\"0.4\" /></g>"
+  },
+  {
+   "cue": "A black pickup truck sits",
+   "scene": "door_crack",
+   "visual_brief": "Rear bumper view: heavy steel pickup grill hovering inches away from sedan rear trunk.",
+   "fallback_scene": "door_crack",
+   "id": "s91"
+  },
+  {
+   "cue": "Its high beams illuminate your",
+   "scene": "house_cutaway",
+   "visual_brief": "Sedan cabin fully lit in harsh overexposed white light, casting long black driver shadow forward.",
+   "fallback_scene": "house_cutaway",
+   "id": "s92"
+  },
+  {
+   "cue": "In the center mirror, the",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror in harsh light revealing complete horrifying detail of passenger figure.",
+   "fallback_scene": "face_uncanny",
+   "id": "s93",
+   "svg": "<g><path d=\"M440 140 C 440 120, 840 120, 840 140 L 820 460 C 820 480, 460 480, 460 460 Z\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"4\" /><ellipse cx=\"630\" cy=\"300\" rx=\"90\" ry=\"120\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"595\" cy=\"280\" r=\"15\" fill=\"#111111\" /><circle cx=\"665\" cy=\"280\" r=\"15\" fill=\"#111111\" /><path d=\"M615 340 Q 630 350 645 340\" fill=\"none\" stroke=\"#111111\" stroke-width=\"3\" /></g>"
+  },
+  {
+   "cue": "It is wearing a drenched,",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up on ragged moldering green wool fabric dripping foul brown lake water onto seat.",
+   "fallback_scene": "door_crack",
+   "id": "s94",
+   "svg": "<g><path d=\"M300 200 Q 640 150, 980 200 L 950 500 Q 640 550, 330 500 Z\" fill=\"none\" stroke=\"#38423B\" stroke-width=\"4\" /><path d=\"M400 350 Q 500 450, 550 500 M 600 320 Q 700 420, 750 480\" fill=\"none\" stroke=\"#7EC8F2\" stroke-width=\"2.2\" stroke-dasharray=\"5,10\" /><circle cx=\"640\" cy=\"420\" r=\"8\" fill=\"#7EC8F2\" /></g>"
+  },
+  {
+   "cue": "Its face has no nose",
+   "scene": "face_uncanny",
+   "visual_brief": "Horrific close-up of smooth featureless grey face skin, two sunken black hollows for eyes.",
+   "fallback_scene": "face_uncanny",
+   "id": "s95"
+  },
+  {
+   "cue": "with hollow black sockets and",
+   "scene": "custom_svg",
+   "visual_brief": "Entity head locked forward, its skeletal long arm frozen in mid-wave in blinding headlight glow.",
+   "fallback_scene": "face_uncanny",
+   "id": "s96",
+   "svg": "<g><circle cx=\"400\" cy=\"250\" r=\"70\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"375\" cy=\"240\" r=\"12\" fill=\"#111111\" /><circle cx=\"425\" cy=\"240\" r=\"12\" fill=\"#111111\" /><path d=\"M460 280 L 700 200 L 750 150 M 700 200 L 730 230 M 700 200 L 750 190\" fill=\"none\" stroke=\"#D2D4D6\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g>"
+  },
+  {
+   "cue": "The truck behind you blares",
+   "scene": "custom_svg",
+   "visual_brief": "Rear glass vibrating violently from concussive sound of dual truck air horns.",
+   "fallback_scene": "window_outside",
+   "sfx": "thud",
+   "id": "s97",
+   "svg": "<g><rect x=\"200\" y=\"150\" width=\"880\" height=\"350\" rx=\"20\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M150 250 Q 200 200, 150 150 M 120 280 Q 200 200, 120 120 M 100 320 Q 200 200, 100 100\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"3\" /><path d=\"M300 250 L 980 250 M 300 350 L 980 350\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" stroke-dasharray=\"20,10\" /></g>"
+  },
+  {
+   "cue": "A deafening, violent blast that",
+   "scene": "strike_words",
+   "words": [
+    "DO NOT SIGNAL",
+    "DO NOT BRAKE",
+    "HOLD LANE"
+   ],
+   "id": "s98",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "The driver behind you flashes",
+   "scene": "mirror_view",
+   "visual_brief": "High beams strobing rapidly on and off, creating frantic strobe flashes inside cabin.",
+   "fallback_scene": "mirror_view",
+   "id": "s99"
+  },
+  {
+   "cue": "He is trying to warn",
+   "scene": "custom_svg",
+   "visual_brief": "Silhouette of truck driver through windshield waving arm frantically in warning gesture.",
+   "fallback_scene": "window_outside",
+   "id": "s100",
+   "svg": "<g><rect x=\"300\" y=\"120\" width=\"680\" height=\"400\" rx=\"20\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M500 300 L 640 180 L 780 300\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"230\" r=\"35\" fill=\"#D2D4D6\" /><path d=\"M615 280 L 600 380 M 665 280 L 680 380\" stroke=\"#D2D4D6\" stroke-width=\"15\" stroke-linecap=\"round\" /><path d=\"M580 180 L 530 130 M 530 130 L 550 120 M 530 130 L 520 150\" fill=\"none\" stroke=\"#F2B84B\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g>"
+  },
+  {
+   "cue": "He can see what is",
+   "scene": "custom_svg",
+   "visual_brief": "Truck driver perspective: seeing tall decayed corpse seated right behind front driver head.",
+   "fallback_scene": "face_uncanny",
+   "id": "s101",
+   "svg": "<line x1=\"300\" y1=\"100\" x2=\"980\" y2=\"100\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"300\" y1=\"550\" x2=\"980\" y2=\"550\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M400,350 L500,250 L800,250 L900,350\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"550\" cy=\"320\" r=\"25\" fill=\"#D2D4D6\" /><circle cx=\"720\" cy=\"280\" r=\"35\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><path d=\"M700,320 L740,320\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "Do not tap your brakes",
+   "scene": "custom_svg",
+   "visual_brief": "Driver foot rigidly held in midair, avoiding red brake pedal switch.",
+   "fallback_scene": "hand_reach",
+   "id": "s102",
+   "svg": "<rect x=\"500\" y=\"450\" width=\"80\" height=\"40\" rx=\"5\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><rect x=\"650\" y=\"430\" width=\"60\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /><path d=\"M540,430 C580,380 620,380 660,420\" stroke=\"#D2D4D6\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Do not flick your hazard",
+   "scene": "custom_svg",
+   "visual_brief": "Red hazard triangle button on steering column glowing silently untouched.",
+   "fallback_scene": "door_crack",
+   "id": "s103",
+   "svg": "<circle cx=\"640\" cy=\"330\" r=\"120\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><polygon points=\"640,250 690,340 590,340\" fill=\"none\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"310\" r=\"8\" fill=\"#FF3B30\" />"
+  },
+  {
+   "cue": "Any light signal will be",
+   "scene": "custom_svg",
+   "visual_brief": "Decayed pale hand reaching forward slowly, fingers hovering over driver shoulder seam.",
+   "fallback_scene": "hand_reach",
+   "sfx": "sting",
+   "id": "s104",
+   "svg": "<circle cx=\"550\" cy=\"330\" r=\"30\" fill=\"#D2D4D6\" /><path d=\"M750,220 C700,250 680,280 620,310\" stroke=\"#202328\" stroke-width=\"6\" fill=\"none\" /><path d=\"M750,220 C700,250 680,280 620,310\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"620\" cy=\"310\" r=\"6\" fill=\"#202328\" />"
+  },
+  {
+   "cue": "Hold your lane.",
+   "scene": "custom_svg",
+   "visual_brief": "POV: steady sedan hood centered precisely between double solid yellow line and shoulder white line.",
+   "fallback_scene": "street_lamp",
+   "id": "s105",
+   "svg": "<line x1=\"640\" y1=\"550\" x2=\"640\" y2=\"350\" stroke=\"#F2B84B\" stroke-width=\"2.2\" stroke-dasharray=\"10,10\" /><line x1=\"400\" y1=\"550\" x2=\"300\" y2=\"350\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"880\" y1=\"550\" x2=\"980\" y2=\"350\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><polygon points=\"580,480 700,480 670,420 610,420\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "After three agonizing miles, the",
+   "scene": "custom_svg",
+   "visual_brief": "Side mirror: twin truck headlights suddenly veering hard ninety degrees into roadside darkness.",
+   "fallback_scene": "mirror_view",
+   "id": "s106",
+   "svg": "<rect x=\"440\" y=\"200\" width=\"400\" height=\"240\" rx=\"10\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"320\" r=\"40\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M580,320 L520,280\" stroke=\"#FF3B30\" stroke-width=\"3\" /><path d=\"M700,320 L760,280\" stroke=\"#FF3B30\" stroke-width=\"3\" />"
+  },
+  {
+   "cue": "headlights behind you suddenly swerve",
+   "scene": "custom_svg",
+   "visual_brief": "Distant view through rear window of truck lights tumbling upside down into black ravine.",
+   "fallback_scene": "window_outside",
+   "id": "s107",
+   "svg": "<rect x=\"440\" y=\"200\" width=\"400\" height=\"240\" rx=\"10\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M560,350 L620,280 L720,380\" fill=\"none\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /><circle cx=\"580\" cy=\"280\" r=\"15\" fill=\"#FF3B30\" opacity=\"0.6\" />"
+  },
+  {
+   "cue": "There is no explosion.",
+   "scene": "custom_svg",
+   "visual_brief": "Dark road behind car plunging back into pitch black misty silence.",
+   "fallback_scene": "street_lamp",
+   "id": "s108",
+   "svg": "<rect x=\"340\" y=\"150\" width=\"600\" height=\"340\" rx=\"10\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"340\" y1=\"320\" x2=\"940\" y2=\"320\" stroke=\"#0A101B\" stroke-width=\"200\" opacity=\"0.8\" />"
+  },
+  {
+   "cue": "Only silence.",
+   "scene": "custom_svg",
+   "visual_brief": "Driver face illuminated only by dim dash green, chest heaving silently.",
+   "fallback_scene": "face_protag",
+   "id": "s109",
+   "svg": "<circle cx=\"640\" cy=\"320\" r=\"60\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"300\" r=\"35\" fill=\"#D2D4D6\" /><circle cx=\"625\" cy=\"295\" r=\"4\" fill=\"#111111\" /><circle cx=\"655\" cy=\"295\" r=\"4\" fill=\"#111111\" /><path d=\"M630,315 Q640,325 650,315\" stroke=\"#111111\" stroke-width=\"2\" fill=\"none\" /><rect x=\"580\" y=\"380\" width=\"120\" height=\"100\" fill=\"none\" stroke=\"rgba(40,180,99,0.3)\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "And the backseat passenger lets",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror view: stitched mouth vibrating with silent raspy throat laughter.",
+   "fallback_scene": "face_uncanny",
+   "sfx": "creak",
+   "id": "s110",
+   "svg": "<ellipse cx=\"640\" cy=\"320\" rx=\"180\" ry=\"100\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"300\" r=\"40\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><path d=\"M610,320 L670,320 M615,325 L665,325 M620,330 L660,330\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "Rule six. When you cross",
+   "scene": "rule_card",
+   "rule_num": 6,
+   "title": "KEEP WINDOWS UP AT BRIDGE",
+   "danger": false,
+   "id": "s111",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "At two thirty-five, the",
+   "scene": "clock_led",
+   "clock": "2:35",
+   "id": "s112",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "rusted steel arches of the",
+   "scene": "custom_svg",
+   "visual_brief": "Massive rusted steel truss bridge looming out of river mist like a giant ribcage.",
+   "fallback_scene": "window_outside",
+   "id": "s113",
+   "svg": "<g><path d=\"M150 450 L300 200 L450 450 M450 450 L600 200 L750 450 M750 450 L900 200 L1050 450\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><line x1=\"120\" y1=\"450\" x2=\"1160\" y2=\"450\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M120 480 Q 640 460 1160 480\" stroke=\"#0A101B\" stroke-width=\"40\" fill=\"none\" /></g>"
+  },
+  {
+   "cue": "Below, the river churns black",
+   "scene": "custom_svg",
+   "visual_brief": "Downward angle looking past bridge railing into rushing black churning river rapids.",
+   "fallback_scene": "window_outside",
+   "id": "s114",
+   "svg": "<g><line x1=\"200\" y1=\"200\" x2=\"1080\" y2=\"200\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"200\" y1=\"200\" x2=\"200\" y2=\"500\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"1080\" y1=\"200\" x2=\"1080\" y2=\"500\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M200 400 Q 640 500 1080 400 M200 450 Q 640 550 1080 450\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"none\" /></g>"
+  },
+  {
+   "cue": "The temperature inside your sedan",
+   "scene": "custom_svg",
+   "visual_brief": "Dashboard thermometer display dropping rapidly: 32F... 24F... 10F...",
+   "fallback_scene": "bedroom_dark",
+   "id": "s115",
+   "svg": "<g><rect x=\"440\" y=\"220\" width=\"400\" height=\"240\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#0A101B\" /><text x=\"480\" y=\"320\" fill=\"#FF3B30\" font-family=\"monospace\" font-size=\"64\" font-weight=\"bold\">10\u00b0F</text><text x=\"500\" y=\"400\" fill=\"#7EC8F2\" font-family=\"sans-serif\" font-size=\"24\">TEMP DROP CRITICAL</text></g>"
+  },
+  {
+   "cue": "Frost crawls across the side",
+   "scene": "custom_svg",
+   "visual_brief": "Time-lapse style frost crystals rapidly locking across driver side door glass.",
+   "fallback_scene": "window_outside",
+   "id": "s116",
+   "svg": "<g><rect x=\"300\" y=\"150\" width=\"680\" height=\"360\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M350 200 L400 250 L380 280 L450 350 M600 150 L550 220 L580 260 L520 320\" stroke=\"#7EC8F2\" stroke-width=\"2.2\" fill=\"none\" /></g>"
+  },
+  {
+   "cue": "Then, the passenger rolls down",
+   "scene": "custom_svg",
+   "visual_brief": "Rear left door window handle cranking on its own or power switch clicking down.",
+   "fallback_scene": "door_crack",
+   "sfx": "buzz",
+   "id": "s117",
+   "svg": "<g><rect x=\"340\" y=\"180\" width=\"600\" height=\"320\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"340\" r=\"40\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><line x1=\"640\" y1=\"300\" x2=\"640\" y2=\"380\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /></g>"
+  },
+  {
+   "cue": "The electric motor whines as",
+   "scene": "custom_svg",
+   "visual_brief": "Rear glass sinking three inches into black door slot, letting in icy wind howling.",
+   "fallback_scene": "door_crack",
+   "id": "s118",
+   "svg": "<g><path d=\"M340 180 L940 180 L940 500 L340 500 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M340 180 L940 280 L940 500 L340 500 Z\" stroke=\"#0A101B\" stroke-width=\"2.2\" fill=\"#0A101B\" /><line x1=\"340\" y1=\"280\" x2=\"940\" y2=\"280\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /></g>"
+  },
+  {
+   "cue": "Freezing rain and fog whip",
+   "scene": "custom_svg",
+   "visual_brief": "Icy mist and river fog swirling violently inside rear cabin like ghost tendrils.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s119",
+   "svg": "<g><path d=\"M360 200 Q 500 350 400 500 M600 200 Q 750 350 650 500 M840 200 Q 900 350 880 500\" stroke=\"#7EC8F2\" stroke-width=\"2.2\" fill=\"none\" opacity=\"0.6\" /></g>"
+  },
+  {
+   "cue": "A hand reaches through the",
+   "scene": "custom_svg",
+   "visual_brief": "Long pale arm extending out through rear open window into rushing bridge wind.",
+   "fallback_scene": "hand_reach",
+   "id": "s120",
+   "svg": "<g><rect x=\"340\" y=\"180\" width=\"600\" height=\"320\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M800 340 L1050 300 L1120 280\" stroke=\"#202328\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\" /><path d=\"M800 340 L1050 300 L1120 280\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"none\" /></g>"
+  },
+  {
+   "cue": "It waves at the dark",
+   "scene": "custom_svg",
+   "visual_brief": "Exterior bridge tracking shot: sedan crossing span with pale hand waving downward at abyss.",
+   "fallback_scene": "window_outside",
+   "id": "s121",
+   "svg": "<g><rect x=\"440\" y=\"300\" width=\"400\" height=\"160\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"840\" cy=\"350\" r=\"40\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M860 370 L920 420\" stroke=\"#4B505A\" stroke-width=\"8\" fill=\"none\" /></g>"
+  },
+  {
+   "cue": "And from beneath the bridge,",
+   "scene": "custom_svg",
+   "visual_brief": "Dozens of pale waterlogged faces rising above bridge steel beams from dark river.",
+   "fallback_scene": "face_uncanny",
+   "sfx": "sting",
+   "id": "s122",
+   "svg": "<g><line x1=\"120\" y1=\"480\" x2=\"1160\" y2=\"480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"300\" cy=\"460\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"500\" cy=\"440\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"700\" cy=\"470\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"900\" cy=\"430\" r=\"25\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" /></g>"
+  },
+  {
+   "cue": "Pull over! Let us in.",
+   "scene": "custom_svg",
+   "visual_brief": "Faces with hollow open mouths whispering out of bridge girders toward car window.",
+   "fallback_scene": "face_uncanny",
+   "bubble": "PULL OVER! LET US IN.",
+   "id": "s123",
+   "svg": "<path d=\"M200 180 L350 250 L350 500 L200 500 Z M1080 180 L930 250 L930 500 L1080 500 Z M350 250 L930 250 L930 320 L350 320 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"450\" cy=\"280\" r=\"25\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><path d=\"M440 290 Q450 310 460 290\" stroke=\"#F2F2F2\" stroke-width=\"2\" fill=\"none\" /><circle cx=\"640\" cy=\"280\" r=\"25\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><path d=\"M630 290 Q640 310 650 290\" stroke=\"#F2F2F2\" stroke-width=\"2\" fill=\"none\" /><circle cx=\"830\" cy=\"280\" r=\"25\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><path d=\"M820 290 Q830 310 840 290\" stroke=\"#F2F2F2\" stroke-width=\"2\" fill=\"none\" /><path d=\"M550 200 L550 450 M600 200 L600 480 M700 200 L700 460\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Pull over now! The index",
+   "scene": "strike_words",
+   "words": [
+    "DO NOT STOP",
+    "DO NOT LOOK",
+    "STAY ON GAS"
+   ],
+   "id": "s124",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "warns: Do not reach back",
+   "scene": "notepad_rules",
+   "title": "BRIDGE CROSSING",
+   "show_q7": false,
+   "rule_text": "NEVER TOUCH WINDOW LOCK OVER RIVER",
+   "id": "s125",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "If your hand crosses the",
+   "scene": "custom_svg",
+   "visual_brief": "Conceptual visual: black clawed entity fingers poised right above center armrest console.",
+   "fallback_scene": "hand_reach",
+   "id": "s126",
+   "svg": "<path d=\"M200 350 L1080 350 L1080 520 L200 520 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"600\" y=\"400\" width=\"80\" height=\"80\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M500 250 Q530 320 570 380\" stroke=\"#4B505A\" stroke-width=\"16\" fill=\"none\" stroke-linecap=\"round\" /><path d=\"M500 250 Q530 320 570 380\" stroke=\"#202328\" stroke-width=\"12\" fill=\"none\" stroke-linecap=\"round\" /><circle cx=\"500\" cy=\"245\" r=\"8\" fill=\"#FF3B30\" />"
+  },
+  {
+   "cue": "Let the storm rage inside",
+   "scene": "custom_svg",
+   "visual_brief": "Driver squinting against freezing spray, hair blowing, eyes fixed rigidly ahead.",
+   "fallback_scene": "face_protag",
+   "id": "s127",
+   "svg": "<circle cx=\"500\" cy=\"300\" r=\"50\" fill=\"#D2D4D6\" /><circle cx=\"485\" cy=\"295\" r=\"5\" fill=\"#111111\" /><circle cx=\"515\" cy=\"295\" r=\"5\" fill=\"#111111\" /><path d=\"M500 315 L505 325 L495 325 Z\" fill=\"#111111\" /><path d=\"M430 270 Q400 250 380 280 Q360 310 390 330\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M350 200 L450 450 M400 220 L500 480 M300 240 L380 400\" stroke=\"#7EC8F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Focus on the yellow lines",
+   "scene": "custom_svg",
+   "visual_brief": "Sedan front bumper crossing wooden expansion joints on rusted bridge deck.",
+   "fallback_scene": "street_lamp",
+   "id": "s128",
+   "svg": "<path d=\"M200 450 L1080 450 L900 250 L380 250 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><line x1=\"640\" y1=\"250\" x2=\"640\" y2=\"450\" stroke=\"#F2F2F2\" stroke-width=\"4\" stroke-dasharray=\"15, 15\" /><line x1=\"380\" y1=\"350\" x2=\"900\" y2=\"350\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x1=\"450\" y1=\"400\" x2=\"830\" y2=\"400\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "The bridge is half a",
+   "scene": "callback_text",
+   "title": "IRON RIVER BRIDGE",
+   "subtitle": "SPAN: 2,640 FT \u2014 MAINTAIN SPEED",
+   "danger": false,
+   "id": "s129",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Every wooden plank beneath your",
+   "scene": "custom_svg",
+   "visual_brief": "Bridge wooden ties rattling beneath spinning sedan tires in rapid staccato vibration.",
+   "fallback_scene": "stairs_creak",
+   "sfx": "thud",
+   "id": "s130",
+   "svg": "<path d=\"M200 250 L1080 250 L1150 500 L130 500 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><line x1=\"250\" y1=\"300\" x2=\"1030\" y2=\"300\" stroke=\"#F2F2F2\" stroke-width=\"3\" /><line x1=\"220\" y1=\"380\" x2=\"1060\" y2=\"380\" stroke=\"#F2F2F2\" stroke-width=\"3\" /><line x1=\"180\" y1=\"460\" x2=\"1100\" y2=\"460\" stroke=\"#F2F2F2\" stroke-width=\"3\" /><circle cx=\"500\" cy=\"420\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"780\" cy=\"420\" r=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" />"
+  },
+  {
+   "cue": "Keep the throttle at fifty-two.",
+   "scene": "custom_svg",
+   "visual_brief": "Driver boot steady on gas pedal despite violent bridge vibrations shaking floorboard.",
+   "fallback_scene": "hand_reach",
+   "id": "s131",
+   "svg": "<rect x=\"550\" y=\"380\" width=\"80\" height=\"120\" rx=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" /><path d=\"M590 300 L590 380\" stroke=\"#F2F2F2\" stroke-width=\"6\" /><ellipse cx=\"590\" cy=\"300\" rx=\"25\" ry=\"10\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#D2D4D6\" /><path d=\"M250 450 L1030 450\" stroke=\"#F2F2F2\" stroke-width=\"4\" stroke-dasharray=\"8, 8\" />"
+  },
+  {
+   "cue": "Do not let the wind",
+   "scene": "custom_svg",
+   "visual_brief": "Exterior wide shot of car emerging from far steel portal of bridge back onto solid highway.",
+   "fallback_scene": "window_outside",
+   "id": "s132",
+   "svg": "<rect x=\"250\" y=\"150\" width=\"780\" height=\"350\" rx=\"20\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M350 150 L350 500 M930 150 L930 500\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M400 300 L880 300 L950 450 L330 450 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"420\" cy=\"380\" r=\"25\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" /><circle cx=\"860\" cy=\"380\" r=\"25\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#202328\" />"
+  },
+  {
+   "cue": "Rule seven. The final warning.",
+   "scene": "rule_card",
+   "rule_num": 7,
+   "title": "RULE SEVEN: THE TRUTH",
+   "danger": true,
+   "id": "s133",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "Once you cross the bridge,",
+   "scene": "custom_svg",
+   "visual_brief": "Through foggy windshield: a warm glowing two-story suburban house sitting on the highway shoulder.",
+   "fallback_scene": "house_cutaway",
+   "id": "s134",
+   "svg": "<rect x=\"250\" y=\"150\" width=\"780\" height=\"380\" rx=\"40\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M500 250 L640 250 L640 420 L500 420 Z M520 280 L560 280 L560 330 L520 330 Z M580 280 L620 280 L620 330 L580 330 Z\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#F2B84B\" opacity=\"0.6\" /><polygon points=\"570,180 480,250 660,250\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "Warm yellow light will glow",
+   "scene": "custom_svg",
+   "visual_brief": "Cozy lit living room window of childhood house standing incongruously beside dark pines.",
+   "fallback_scene": "window_outside",
+   "id": "s135",
+   "svg": "<rect x=\"440\" y=\"180\" width=\"400\" height=\"300\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"520\" y=\"250\" width=\"100\" height=\"140\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#F2B84B\" opacity=\"0.4\" /><rect x=\"680\" y=\"250\" width=\"100\" height=\"100\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#F2B84B\" opacity=\"0.4\" /><path d=\"M200 480 L350 200 L400 480 Z M320 480 L420 250 L480 480 Z\" stroke=\"#4B505A\" stroke-width=\"2.2\" fill=\"#202328\" />"
+  },
+  {
+   "cue": "A figure resembling your mother",
+   "scene": "custom_svg",
+   "visual_brief": "Silhouette of mother standing on porch steps in golden porch light, waving both arms warmly.",
+   "fallback_scene": "face_protag",
+   "id": "s136",
+   "svg": "<rect x=\"490\" y=\"220\" width=\"300\" height=\"260\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><rect x=\"580\" y=\"300\" width=\"120\" height=\"180\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"#F2B84B\" opacity=\"0.5\" /><circle cx=\"640\" cy=\"240\" r=\"25\" fill=\"#D2D4D6\" /><circle cx=\"630\" cy=\"235\" r=\"4\" fill=\"#111111\" /><circle cx=\"650\" cy=\"235\" r=\"4\" fill=\"#111111\" /><path d=\"M640 250 L640 320\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M640 270 L580 230 M640 270 L700 230\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "The GPS on your dashboard",
+   "scene": "phone_map",
+   "sender": "GPS NAV",
+   "distance": "YOU HAVE ARRIVED",
+   "id": "s137",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "This is the trap.",
+   "scene": "strike_words",
+   "words": [
+    "IT'S A TRAP",
+    "DO NOT STOP",
+    "LOOK CLOSELY"
+   ],
+   "id": "s138",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "This is why rule seven",
+   "scene": "custom_svg",
+   "visual_brief": "Index card on dash illuminated by red dashboard warning light with underlined rule seven.",
+   "fallback_scene": "door_crack",
+   "id": "s139",
+   "svg": "<rect x=\"440\" y=\"280\" width=\"400\" height=\"220\" rx=\"10\" fill=\"#111111\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><rect x=\"480\" y=\"320\" width=\"320\" height=\"140\" fill=\"#0A101B\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /><text x=\"520\" y=\"370\" fill=\"#F2F2F2\" font-family=\"monospace\" font-size=\"20\">RULE 7:</text><text x=\"520\" y=\"410\" fill=\"#FF3B30\" font-family=\"monospace\" font-size=\"18\">DO NOT LOOK BACK</text><line x=\"520\" y=\"425\" width=\"0\" x2=\"700\" y2=\"425\" stroke=\"#FF3B30\" stroke-width=\"2.2\" /><circle cx=\"750\" cy=\"350\" r=\"8\" fill=\"#FF3B30\" />"
+  },
+  {
+   "cue": "The passenger does not want",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror view: passenger face looking down sadly, hand folded peacefully in lap.",
+   "fallback_scene": "face_shadow",
+   "id": "s140",
+   "svg": "<path d=\"M440,160 L840,160 L880,520 L400,520 Z\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M520,240 L760,240 L740,440 L540,440 Z\" fill=\"#111111\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"300\" r=\"35\" fill=\"#D2D4D6\" /><circle cx=\"630\" cy=\"295\" r=\"4\" fill=\"#111111\" /><circle cx=\"650\" cy=\"295\" r=\"4\" fill=\"#111111\" /><path d=\"M635,315 Q640,320 645,315\" stroke=\"#111111\" stroke-width=\"2\" fill=\"none\" /><path d=\"M580,390 Q640,370 700,390\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" />"
+  },
+  {
+   "cue": "The passenger is a mirror.",
+   "scene": "custom_svg",
+   "visual_brief": "Rearview mirror reflecting the exact same eyes as the driver staring back.",
+   "fallback_scene": "eye_closeup",
+   "sfx": "sting",
+   "id": "s141",
+   "svg": "<path d=\"M440,160 L840,160 L880,520 L400,520 Z\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M520,220 L760,220 L750,460 L530,460 Z\" fill=\"#111111\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"320\" r=\"50\" fill=\"#D2D4D6\" /><circle cx=\"620\" cy=\"310\" r=\"8\" fill=\"#111111\" /><circle cx=\"660\" cy=\"310\" r=\"8\" fill=\"#111111\" /><path d=\"M620,350 Q640,340 660,350\" stroke=\"#111111\" stroke-width=\"3\" fill=\"none\" />"
+  },
+  {
+   "cue": "Look closely at the hands",
+   "scene": "custom_svg",
+   "visual_brief": "Close-up on driver hands gripping steering wheel: grey rotting skin and elongated fingers.",
+   "fallback_scene": "hand_reach",
+   "id": "s142",
+   "svg": "<path d=\"M380,480 Q640,320 900,480\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"640\" cy=\"420\" r=\"90\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M480,420 L580,420 L640,460 L700,420 L800,420\" stroke=\"#7EC8F2\" stroke-width=\"4\" fill=\"none\" /><path d=\"M580,420 Q560,450 530,470\" stroke=\"#7EC8F2\" stroke-width=\"3\" fill=\"none\" /><path d=\"M700,420 Q720,450 750,470\" stroke=\"#7EC8F2\" stroke-width=\"3\" fill=\"none\" />"
+  },
+  {
+   "cue": "The skin is pale. The",
+   "scene": "custom_svg",
+   "visual_brief": "Driver fingers flexing on wheel, revealing waterlogged decay and blue fingernails.",
+   "fallback_scene": "hand_reach",
+   "id": "s143",
+   "svg": "<path d=\"M480,440 Q640,340 800,440\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M540,440 L590,410 L640,450 L690,410 L740,440\" stroke=\"#4B505A\" stroke-width=\"5\" fill=\"none\" /><circle cx=\"590\" cy=\"410\" r=\"6\" fill=\"#7EC8F2\" /><circle cx=\"690\" cy=\"410\" r=\"6\" fill=\"#7EC8F2\" />"
+  },
+  {
+   "cue": "Check your odometer.",
+   "scene": "custom_svg",
+   "visual_brief": "Mechanical rolling odometer numbers frozen between digits with rusted gears jammed.",
+   "fallback_scene": "bedroom_dark",
+   "sfx": "click",
+   "id": "s144",
+   "svg": "<rect x=\"440\" y=\"260\" width=\"400\" height=\"200\" rx=\"15\" fill=\"#111111\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><rect x=\"480\" y=\"310\" width=\"320\" height=\"100\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><text x=\"510\" y=\"380\" fill=\"#FF3B30\" font-family=\"monospace\" font-size=\"48\">4 9 0 0 4</text><line x=\"615\" y=\"310\" x2=\"615\" y2=\"410\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><line x=\"675\" y=\"310\" x2=\"675\" y2=\"410\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "It stopped counting thirty years",
+   "scene": "callback_text",
+   "title": "OCTOBER 14, 1994",
+   "subtitle": "FATAL COLLISION \u2014 IRON RIVER",
+   "danger": true,
+   "id": "s145",
+   "fallback_scene": "bedroom_dark"
+  },
+  {
+   "cue": "You died on Route 49",
+   "scene": "custom_svg",
+   "visual_brief": "Submerged vintage sedan upside down on muddy riverbed under Iron River Bridge.",
+   "fallback_scene": "house_cutaway",
+   "id": "s146",
+   "svg": "<path d=\"M200,400 L1080,400 L1120,560 L160,560 Z\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M360,320 L920,320 L880,440 L400,440 Z\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"480\" cy=\"440\" r=\"35\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><circle cx=\"800\" cy=\"440\" r=\"35\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" fill=\"none\" /><path d=\"M200,400 L1080,400\" stroke=\"#7EC8F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "The entity in the backseat",
+   "scene": "custom_svg",
+   "visual_brief": "New modern tow truck driver sitting in front seat of car on highway in 2024.",
+   "fallback_scene": "face_protag",
+   "id": "s147",
+   "svg": "<rect x=\"400\" y=\"200\" width=\"480\" height=\"300\" rx=\"10\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"320\" r=\"50\" fill=\"#D2D4D6\" /><circle cx=\"625\" cy=\"310\" r=\"5\" fill=\"#111111\" /><circle cx=\"655\" cy=\"310\" r=\"5\" fill=\"#111111\" /><path d=\"M630,345 Q640,355 650,345\" stroke=\"#111111\" stroke-width=\"2.5\" fill=\"none\" /><path d=\"M440,420 L840,420\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" />"
+  },
+  {
+   "cue": "The entity in the backseat is",
+   "scene": "custom_svg",
+   "visual_brief": "Modern driver staring in horror into his rearview mirror at you sitting behind him.",
+   "fallback_scene": "face_protag",
+   "id": "s148",
+   "svg": "<path d=\"M440,160 L840,160 L880,520 L400,520 Z\" fill=\"#0A101B\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><circle cx=\"640\" cy=\"300\" r=\"60\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"620\" cy=\"290\" r=\"6\" fill=\"#FF3B30\" /><circle cx=\"660\" cy=\"290\" r=\"6\" fill=\"#FF3B30\" /><path d=\"M625,330 Q640,310 655,330\" stroke=\"#FF3B30\" stroke-width=\"2.5\" fill=\"none\" />"
+  },
+  {
+   "cue": "And you are the one",
+   "scene": "custom_svg",
+   "visual_brief": "You sitting in backseat with head tilted forty-five degrees, raising long pale hand to wave.",
+   "fallback_scene": "face_uncanny",
+   "sfx": "sting",
+   "id": "s149",
+   "svg": "<circle cx=\"640\" cy=\"260\" r=\"60\" fill=\"#202328\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"620\" cy=\"250\" r=\"6\" fill=\"#FF3B30\" /><circle cx=\"660\" cy=\"250\" r=\"6\" fill=\"#FF3B30\" /><path d=\"M625,285 Q640,295 655,285\" stroke=\"#FF3B30\" stroke-width=\"2.5\" fill=\"none\" /><path d=\"M580,340 L540,480 L500,500\" stroke=\"#7EC8F2\" stroke-width=\"3\" fill=\"none\" /><path d=\"M500,500 L470,470\" stroke=\"#7EC8F2\" stroke-width=\"3\" fill=\"none\" /><path d=\"M500,500 L470,510\" stroke=\"#7EC8F2\" stroke-width=\"3\" fill=\"none\" />"
+  },
+  {
+   "cue": "Now the headlights cut out.",
+   "scene": "bedroom_dark",
+   "visual_brief": "Sedan headlights instantly dying into total pitch-black night.",
+   "fallback_scene": "bedroom_dark",
+   "id": "s150"
+  },
+  {
+   "cue": "The engine goes dead.",
+   "scene": "bedroom_dark",
+   "visual_brief": "Dashboard dials dropping to zero, needles dead, instrument backlights dying out.",
+   "fallback_scene": "bedroom_dark",
+   "sfx": "thud",
+   "id": "s151"
+  },
+  {
+   "cue": "The cold silence swallows Route",
+   "scene": "custom_svg",
+   "visual_brief": "Wide silhouette shot of dead car stranded on foggy empty highway under dead starry sky.",
+   "fallback_scene": "window_outside",
+   "id": "s152",
+   "svg": "<g><path d=\"M80 500 L640 320 L1200 500\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><rect x=\"440\" y=\"400\" width=\"400\" height=\"100\" rx=\"20\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M150 150 L1130 150\" stroke=\"#0A101B\" stroke-width=\"2.2\" stroke-dasharray=\"5 20\" /><circle cx=\"300\" cy=\"180\" r=\"3\" fill=\"#F2F2F2\" /><circle cx=\"600\" cy=\"140\" r=\"3\" fill=\"#F2F2F2\" /><circle cx=\"900\" cy=\"170\" r=\"3\" fill=\"#F2F2F2\" /></g>"
+  },
+  {
+   "cue": "Next time you drive through",
+   "scene": "custom_svg",
+   "visual_brief": "POV from back window of car looking out into drifting midnight fog.",
+   "fallback_scene": "window_outside",
+   "id": "s153",
+   "svg": "<g><rect x=\"240\" y=\"120\" width=\"800\" height=\"400\" rx=\"20\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M240 120 L340 220 M1040 120 L940 220 M240 520 L340 420 M1040 520 L940 420\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><rect x=\"340\" y=\"220\" width=\"600\" height=\"300\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"2.2\" /><path d=\"M400 320 Q640 280 880 320\" fill=\"none\" stroke=\"#4B505A\" stroke-width=\"4\" stroke-dasharray=\"20 10\" /></g>"
+  },
+  {
+   "cue": "And if you see me",
+   "scene": "custom_svg",
+   "visual_brief": "Extreme close-up of rearview mirror in dark car reflecting pale stitched smile and waving hand.",
+   "fallback_scene": "mirror_view",
+   "bubble": "Don't pull over",
+   "id": "s154",
+   "svg": "<g><ellipse cx=\"640\" cy=\"340\" rx=\"260\" ry=\"180\" fill=\"none\" stroke=\"#F2F2F2\" stroke-width=\"4\" /><ellipse cx=\"640\" cy=\"340\" rx=\"230\" ry=\"150\" fill=\"none\" stroke=\"#4B505A\" stroke-width=\"2.2\" /><circle cx=\"570\" cy=\"300\" r=\"18\" fill=\"#111111\" /><circle cx=\"710\" cy=\"300\" r=\"18\" fill=\"#111111\" /><path d=\"M590 400 Q640 440 690 400\" fill=\"none\" stroke=\"#FF3B30\" stroke-width=\"3\" /><path d=\"M750 380 L820 320\" stroke=\"#D2D4D6\" stroke-width=\"8\" stroke-linecap=\"round\" /></g>"
+  },
+  {
+   "cue": "Don't pull over.",
+   "scene": "callback_text",
+   "title": "DON'T PULL OVER",
+   "subtitle": "THE PASSENGER IS ALREADY INSIDE",
+   "danger": true,
+   "id": "s155",
+   "fallback_scene": "bedroom_dark"
+  }
+ ]
+}
