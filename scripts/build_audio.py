@@ -393,7 +393,7 @@ def align_storyboard(words: list, total_dur: float):
         sc["start_sec"] = round(float(words[cursor][0]), 3)
 
     # Guarantee strictly increasing timestamps & fast-paced max shot duration (<= 4.2s)
-    alt_cycle = ["face_kid", "door_crack", "bedroom_view", "face_shadow", "window_dawn", "house_cutaway"]
+    alt_cycle = ["face_protag", "door_crack", "bedroom_dark", "face_shadow", "window_outside", "eye_closeup"]
     paced = []
     for i, sc in enumerate(scenes):
         start_t = sc["start_sec"]
@@ -409,7 +409,7 @@ def align_storyboard(words: list, total_dur: float):
             for k in range(1, splits + 1):
                 sub_t = round(start_t + (dur * k) / (splits + 1), 3)
                 prev_scene = paced[-1]["scene"]
-                pick = next((x for x in alt_cycle if x != prev_scene), "face_kid")
+                pick = next((x for x in alt_cycle if x != prev_scene), "face_protag")
                 paced.append({
                     "id": f"{sc.get('id', 's')}_{k}",
                     "start_sec": sub_t,

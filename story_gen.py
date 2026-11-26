@@ -1,13 +1,17 @@
-"""Nightora-Style Rules-Horror Long-Form Script + Fast-Paced Storyboard + Publishing Generator.
+"""Hybrid Custom-SVG Nightora Rules-Horror Generator.
 Produces:
-  1) script_txt     (Nightora-style suspense script with [whisper] / [shout] acting tags)
-  2) storyboard     (JSON with 20 distinct Nightora SVG scenes, exact spoken `cue` phrases,
-                     anti-repetition enforcement, and fast 2.2-3.0s pacing)
+  1) script_txt     (100% original Nightora-style script with [whisper] / [shout] acting tags)
+  2) storyboard     (JSON mixing crisp built-in UI components — rule_card, clock_led, phone_text,
+                     phone_call, phone_map, notepad_rules, strike_words, callback_text — with
+                     brand-new AI-drawn custom Nightora SVGs for EVERY unique story beat,
+                     validated with strict XML parsing and zero consecutive repeats)
   3) publishing_txt (10 viral titles, SEO description, tags, 5 thumbnail prompts)
 """
 import os
 import re
 import json
+import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 import requests
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
@@ -20,55 +24,40 @@ FALLBACK_MODELS = [
     "gemini-2.5-flash",
 ]
 
-SCENES = [
-    "house_cutaway",
-    "bedroom_view",
-    "kitchen_view",
-    "face_kid",
-    "face_shadow",
-    "face_smile",
-    "face_mom_cry",
-    "clock_countdown",
-    "notepad_rules",
-    "rule_dots",
+UI_SCENES = {
     "rule_card",
+    "clock_led",
+    "phone_text",
+    "phone_call",
+    "phone_map",
+    "notepad_rules",
     "strike_words",
-    "door_crack",
-    "stairs_creak",
-    "wrist_grab",
-    "lamp_reach",
-    "hallway_figure",
-    "window_dawn",
-    "flashback_scene",
     "callback_text",
-]
-
-ALT_ANGLE = {
-    "house_cutaway": "bedroom_view",
-    "bedroom_view": "face_kid",
-    "kitchen_view": "house_cutaway",
-    "face_kid": "bedroom_view",
-    "face_shadow": "door_crack",
-    "face_smile": "face_kid",
-    "face_mom_cry": "hallway_figure",
-    "clock_countdown": "window_dawn",
-    "notepad_rules": "rule_dots",
-    "rule_dots": "notepad_rules",
-    "rule_card": "bedroom_view",
-    "strike_words": "house_cutaway",
-    "door_crack": "face_kid",
-    "stairs_creak": "door_crack",
-    "wrist_grab": "face_shadow",
-    "lamp_reach": "door_crack",
-    "hallway_figure": "face_mom_cry",
-    "window_dawn": "clock_countdown",
-    "flashback_scene": "face_kid",
-    "callback_text": "face_shadow",
 }
+
+FALLBACK_SCENES = {
+    "window_outside",
+    "street_lamp",
+    "bedroom_dark",
+    "hallway_view",
+    "door_crack",
+    "door_peephole",
+    "stairs_creak",
+    "house_cutaway",
+    "mirror_view",
+    "eye_closeup",
+    "face_protag",
+    "face_shadow",
+    "face_uncanny",
+    "hand_reach",
+}
+
+VALID_SFX = {"sting", "tick", "creak", "click", "thud", "buzz", "beep"}
+
+_ACTIVE_MODEL = None
 
 
 def _discover_text_models() -> list:
-    """Auto-discovers live Gemini text models on the user's API key if defaults 404."""
     try:
         r = requests.get(
             "https://generativelanguage.googleapis.com/v1beta/models",
@@ -82,17 +71,16 @@ def _discover_text_models() -> list:
             methods = m.get("supportedGenerationMethods", [])
             if "generateContent" in methods and "gemini" in name and "tts" not in name and "embedding" not in name:
                 found.append(name)
-        # Prefer flash models first
-        found.sort(key=lambda x: (0 if "flash" in x else 1, x), reverse=False)
+        found.sort(key=lambda x: (0 if "flash" in x else 1, x))
         return found[:5]
     except Exception:
         return []
 
 
-def _call_gemini(model: str, system_prompt: str, user_prompt: str) -> str:
+def _call_gemini(model: str, system_prompt: str, user_prompt: str, temp: float = 0.82) -> str:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
-    gen_cfg = {"temperature": 0.78, "maxOutputTokens": 24576}
+    gen_cfg = {"temperature": temp, "maxOutputTokens": 24576}
     if model.startswith("gemini-3"):
         gen_cfg["thinkingConfig"] = {"thinkingLevel": "low"}
     elif model.startswith("gemini-2.5"):
@@ -108,6 +96,38 @@ def _call_gemini(model: str, system_prompt: str, user_prompt: str) -> str:
     return "".join(p.get("text", "") for p in parts if not p.get("thought"))
 
 
+def _call_with_fallback(system_prompt: str, user_prompt: str, temp: float = 0.82) -> str:
+    global _ACTIVE_MODEL
+    candidates = []
+    if _ACTIVE_MODEL:
+        candidates.append(_ACTIVE_MODEL)
+    candidates.extend(FALLBACK_MODELS)
+    candidates = list(dict.fromkeys(candidates))
+
+    last_err = None
+    tried = set()
+    for model in candidates:
+        tried.add(model)
+        try:
+            out = _call_gemini(model, system_prompt, user_prompt, temp=temp)
+            _ACTIVE_MODEL = model
+            return out
+        except Exception as e:
+            last_err = e
+
+    for model in _discover_text_models():
+        if model in tried:
+            continue
+        try:
+            out = _call_gemini(model, system_prompt, user_prompt, temp=temp)
+            _ACTIVE_MODEL = model
+            return out
+        except Exception as e:
+            last_err = e
+
+    raise RuntimeError(f"Gemini generation failed: {last_err}")
+
+
 def _strip_fences(s: str) -> str:
     s = s.strip()
     s = re.sub(r"^```[a-zA-Z]*\s*", "", s)
@@ -115,144 +135,200 @@ def _strip_fences(s: str) -> str:
     return s.strip()
 
 
-def _enforce_no_repeats(scenes: list) -> list:
-    """Guarantees valid scene types, zero consecutive duplicates, and balanced variety."""
+def sanitize_svg_inner(raw_svg: str) -> str:
+    """Strips outer <svg> wrapper, blocks unsafe tags/attrs, and validates XML cleanly."""
+    if not raw_svg or not isinstance(raw_svg, str):
+        return ""
+    s = raw_svg.strip()
+    # Remove markdown fences if any
+    s = re.sub(r"^```[a-zA-Z]*\s*", "", s)
+    s = re.sub(r"\s*```$", "", s).strip()
+    # Strip XML declarations / comments
+    s = re.sub(r"<\?xml[^>]*\?>", "", s)
+    s = re.sub(r"<!--.*?-->", "", s, flags=re.S)
+    # Remove dangerous tags
+    s = re.sub(r"<(script|foreignObject|iframe|object|embed)[^>]*>.*?</\1>", "", s, flags=re.I | re.S)
+    # Strip event handlers (onload, onerror, etc.)
+    s = re.sub(r'\son[a-z]+\s*=\s*("[^"]*"|\'[^\']*\')', "", s, flags=re.I)
+    # Unwrap outer <svg ...> ... </svg> if present
+    m = re.match(r"^\s*<svg[^>]*>(.*)</svg>\s*$", s, flags=re.I | re.S)
+    if m:
+        s = m.group(1).strip()
+    if not s:
+        return ""
+    # Validate strict XML by wrapping in a dummy root
+    try:
+        ET.fromstring(f"<g xmlns='http://www.w3.org/2000/svg'>{s}</g>")
+        return s
+    except Exception:
+        return ""
+
+
+def _draw_custom_svg_batch(batch: list, topic: str) -> dict:
+    """Generates custom Nightora-style SVG inner markup for a batch of 8-12 story beats."""
+    sys_prompt = """You are a minimalist vector artist drawing NIGHTORA-style dark horror SVG frames on a 1280x720 canvas.
+
+EXACT NIGHTORA ART STYLE (follow strictly):
+- Background is ALREADY pure #000000 black (do NOT draw a full-screen background rect).
+- Crisp thin white architectural/object lines: stroke="#F2F2F2" stroke-width="2.2" fill="none".
+- Simple geometric pictogram characters: soft light-gray (#D2D4D6) rounded body/circle head with expressive minimal dark eyes/mouth (#111111) for the protagonist; dark eerie silhouette (#202328 with stroke="#4B505A") for the threat/entity.
+- Accent colors ONLY when meaningful: warm lamp/door light glow rgba(242,184,75,0.22) or #F2B84B, red LED/danger #FF3B30, subtle night sky #0A101B, single tear #7EC8F2.
+- SAFE CANVAS ZONE: keep ALL artwork inside x=80..1200 and y=90..570 so it NEVER covers the top REC HUD (y<65) or bottom captions (y>600).
+- Use clean, valid XML SVG primitives ONLY (<rect>, <circle>, <ellipse>, <line>, <polyline>, <polygon>, <path>, <g>, <text>). Always self-close empty tags (<rect ... />). Never use <script>, <style>, or unescaped '&'.
+- Make EVERY drawing visually distinct, immediately readable in 2 seconds, and 100% literal to that scene's visual_brief!
+
+Return ONLY a valid JSON object mapping each scene `id` to its inner SVG string (NO outer <svg> tag):
+{"s02": "<line ... /><circle ... />", "s04": "..."}"""
+
+    items = [
+        {"id": sc["id"], "cue": sc.get("cue", ""), "visual_brief": sc.get("visual_brief", ""), "danger": bool(sc.get("danger"))}
+        for sc in batch
+    ]
+    user_prompt = f"Story topic: {topic}\nDraw a unique, literal Nightora SVG for each of these scenes:\n{json.dumps(items, ensure_ascii=False)}"
+    try:
+        raw = _call_with_fallback(sys_prompt, user_prompt, temp=0.65)
+        data = json.loads(_strip_fences(raw))
+        out = {}
+        if isinstance(data, dict):
+            for k, v in data.items():
+                clean = sanitize_svg_inner(v)
+                if clean:
+                    out[k] = clean
+        return out
+    except Exception:
+        return {}
+
+
+def _sanitize_and_hydrate_scenes(scenes: list, topic: str) -> list:
+    """Validates storyboard fields and generates custom Nightora SVGs in parallel batches."""
     cleaned = []
-    prev_type = None
-    recent = []
+    custom_targets = []
     for idx, sc in enumerate(scenes):
         if not isinstance(sc, dict):
             continue
-        st = sc.get("scene", "house_cutaway")
-        if st not in SCENES:
-            st = "house_cutaway"
-        if st == prev_type:
-            cand = ALT_ANGLE.get(st, "face_kid")
-            if cand == prev_type or cand in recent[-2:]:
-                for alt in SCENES:
-                    if alt not in (prev_type, "rule_card", "rule_dots", "notepad_rules") and alt not in recent[-3:]:
-                        cand = alt
-                        break
-            st = cand
-        sc["scene"] = st
         sc["id"] = f"s{idx + 1:02d}"
+        st = str(sc.get("scene", "custom_svg")).strip()
+        if st not in UI_SCENES and st not in FALLBACK_SCENES and st != "custom_svg":
+            st = "custom_svg"
+        sc["scene"] = st
+
+        fb = str(sc.get("fallback_scene", "bedroom_dark")).strip()
+        if fb not in FALLBACK_SCENES:
+            fb = "bedroom_dark"
+        sc["fallback_scene"] = fb
+
+        for str_key in ("bubble", "title", "subtitle", "sender", "clock", "distance", "cue", "rule_text", "visual_brief"):
+            if str_key in sc and not isinstance(sc[str_key], str):
+                sc.pop(str_key, None)
+        if "messages" in sc and not isinstance(sc["messages"], list):
+            sc.pop("messages", None)
+        if "words" in sc and not isinstance(sc["words"], list):
+            sc.pop("words", None)
+        if sc.get("sfx") not in VALID_SFX:
+            sc.pop("sfx", None)
+
+        if st == "custom_svg":
+            if not sc.get("visual_brief"):
+                sc["visual_brief"] = f"Minimalist Nightora horror scene illustrating: {sc.get('cue', topic)}"
+            custom_targets.append(sc)
         cleaned.append(sc)
-        prev_type = st
-        recent.append(st)
+
+    # Batch-generate custom SVGs concurrently (10 scenes per batch, up to 4 parallel workers)
+    batch_size = 10
+    batches = [custom_targets[i : i + batch_size] for i in range(0, len(custom_targets), batch_size)]
+    svg_map = {}
+    if batches:
+        with ThreadPoolExecutor(max_workers=4) as ex:
+            futures = [ex.submit(_draw_custom_svg_batch, b, topic) for b in batches]
+            for fut in futures:
+                try:
+                    svg_map.update(fut.result())
+                except Exception:
+                    pass
+
+    for sc in cleaned:
+        if sc["scene"] == "custom_svg":
+            svg_code = svg_map.get(sc["id"], "")
+            if svg_code:
+                sc["svg"] = svg_code
+            else:
+                # Safe fallback if a single SVG failed XML validation
+                sc["scene"] = sc["fallback_scene"]
+
     return cleaned
 
 
 def generate_style5_package(topic: str, minutes: float, lang: str = "en"):
     target_words = max(160, int(round(minutes * 150)))
-    target_scenes = max(20, int(round(minutes * 23)))
+    target_scenes = max(20, int(round(minutes * 20)))
     lang_label = (
-        "Hindi (Devanagari, natural spoken Hindi keeping common English words like phone, rule, door)"
+        "Hindi (Devanagari, natural spoken Hindi keeping common English words like phone, text, window, door)"
         if lang.startswith("hi")
         else "English"
     )
 
-    system_prompt = f"""You are a viral YouTube Rules-Horror writer & visual director recreating the exact NIGHTORA minimalist dark-pictogram thriller format.
-Write a gripping {minutes}-minute video (~{target_words} spoken words) in {lang_label}:
-1. Cold open (0:00-0:30): Immediately hook the viewer with the premise, a 10-second countdown tension beat, and the 7-rule promise ("There are seven rules. Six will keep you safe until morning. The seventh is the one almost nobody finds in time.").
-2. Protagonist setup: Introduce a relatable kid/character (e.g., Leo, 11, 9:14 PM on a Tuesday night) and the first eerie incident.
-3. Rules 1 to 6: Alternate crisp rule title cards ("Rule one. Don't answer the voice.") with vivid survival explanations AND the protagonist's real-time story unfolding beat-by-beat. Plant ONE subtle verbal mistake/callback early (like a wrong name or phrase) that pays off in the finale.
-4. Rule 7 & Plot Twist Finale: Deliver a chilling psychological twist that reframes every rule they followed all night, pay off the planted callback, and close with a sharp final chill + subscribe CTA.
+    system_prompt = f"""You are an original YouTube Rules-Horror writer & visual director creating a NIGHTORA-style dark minimalist thriller.
+
+CRITICAL ORIGINALITY RULE:
+- Write a 100% BRAND-NEW, ORIGINAL story strictly built around the user's exact TOPIC below.
+- Invent a fresh protagonist name, fresh setting, fresh late-night time, fresh 7 rules belonging ONLY to this topic, and an original twist ending.
+- NEVER reuse stories about a mom calling for dinner from downstairs or a boy named Leo.
+
+STORY STRUCTURE ({minutes} minutes, ~{target_words} spoken words in {lang_label}):
+1. Cold open (0:00-0:25): Hook directly with the user's topic as urgent survival advice + promise 7 rules where Rule 7 reveals the chilling truth.
+2. Incident setup: Introduce your original protagonist, exact time, and the exact moment the premise begins.
+3. Rules 1 to 6: Alternate crisp rule cards with tense survival explanations and the protagonist's real-time experience. Plant ONE subtle clue early that pays off in the twist.
+4. Rule 7 & Finale Twist: Deliver a chilling twist specific to this premise, pay off the clue, and close with a sharp final line.
 
 VOICE ACTING TAGS IN SCRIPT:
-- Put [whisper] right before whispered dialogue lines (e.g. [whisper] Don't answer. I heard it too.).
-- Put [shout] right before distant calling voices (e.g. [shout] Dinner! Come on down!).
-- Keep narration sentences short, punchy, and tense (5-12 words each) for fast-paced delivery.
+- Put [whisper] before whispered lines.
+- Put [shout] before distant/loud calling lines.
+- Keep sentences short, punchy, and fast-paced (5-12 words each).
 
-AVAILABLE 20 NIGHTORA SCENE TYPES (use ALL relevant types; NEVER repeat the same scene type twice in a row!):
-- house_cutaway   (2-story white-line house cross-section, kitchen light cone, stairs, upstairs/downstairs figures; optional `bubble`, `highlight_room`: true, `both_figures`: true)
-- bedroom_view    (nightstand with red LED clock, lamp, 4-pane moon/dawn window, closet, kid & dark figure; optional `clock`, `grab`: true, `dawn`: true, `trap_box`: true, `bubble`)
-- kitchen_view    (steaming pot on counter, warm hanging bulb cone, dining table, chair, calling `bubble`)
-- face_kid        (close-up geometric kid face; `mood`: "neutral"|"scared"|"gasp"|"cry", optional `sound_waves`: true, `bubble`)
-- face_shadow     (faceless dark silhouette head in shadows; optional `bubble`)
-- face_smile      (creepy wide-eyed unblinking smile reveal in gray dawn light; optional `bubble`)
-- face_mom_cry    (soft geometric parent face; `mood`: "cry"|"smile", optional `bubble`)
-- clock_countdown (centered glowing red LED digital box; `clock`: "0:10" for countdown or "9:14" / "11:40" / "3:02" / "5:51")
-- notepad_rules   (taped yellow lined notepad; `title`: e.g. "IF IT CALLS YOU", `show_q7`: true, `rule_text`: optional line 7 text)
-- rule_dots       (7 minimalist squares with glowing red 7th square)
-- rule_card       (Nightora rule reveal box; `rule_num`: 1..7, `title`: ALL-CAPS rule title, `danger`: true for rule 7)
-- strike_words    (3 quoted words slashed with red lines; `words`: ["COMING", "WHAT?", "OKAY"])
-- door_crack      (close-up white door with amber under-door light crack, shadow feet; `feet`: true/false, `bubble`)
-- stairs_creak    (white stepped staircase with sound-wave pulses climbing steps; `step`: 1..6)
-- wrist_grab      (close-up horizontal white arm with dark fingers gripping; `stretch`: true for double-wrap reveal)
-- lamp_reach      (zoomed nightstand lamp + clock + gray hand reaching toward lamp; `clock`)
-- hallway_figure  (white silhouette figure outside closed door with hand on wood + tear; `bubble`)
-- window_dawn     (4-pane window close-up; `dawn`: false for night moon, true for gray morning light)
-- flashback_scene (atmospheric dark-blue water/pier memory scene with kid silhouette & swimming fish)
-- callback_text   (stark centered quote card; `title`: e.g. "GOOD BOY, LEO.", `subtitle`: "9:31 PM", `danger`: true/false)
+HYBRID VISUAL SYSTEM (~{target_scenes} fast-paced scenes, cutting every 2.5-3.2 seconds):
+- For UI / text / phone / clock moments, use these built-in crisp components:
+  * `rule_card`      (`rule_num`: 1..7, `title`: ALL-CAPS rule title, `danger`: true for rule 7)
+  * `clock_led`      (`clock`: e.g. "0:10" or "2:17" or "5:48")
+  * `phone_text`     (`sender`, `messages`: ["short msg 1", "short msg 2"], `clock`)
+  * `phone_call`     (`sender`, `subtitle`: e.g. "0.0 MILES AWAY")
+  * `phone_map`      (`sender`, `distance`: e.g. "30 FT AWAY")
+  * `notepad_rules`  (`title`: short ALL-CAPS header from this story, `show_q7`: true/false, `rule_text`: optional)
+  * `strike_words`   (`words`: ["WORD1", "WORD2", "WORD3"] from THIS story)
+  * `callback_text`  (`title`, `subtitle`, `danger`: true/false)
+- For ALL OTHER story moments (rooms, hallways, windows, streets, cars, bathrooms, pets, hands, faces, shadows, twists), set `"scene": "custom_svg"` AND write a concrete, literal 1-sentence `"visual_brief"` describing the exact Nightora minimalist white-line drawing for what is spoken in that beat, plus a `"fallback_scene"` from: window_outside, street_lamp, bedroom_dark, hallway_view, door_crack, door_peephole, stairs_creak, house_cutaway, mirror_view, eye_closeup, face_protag, face_shadow, face_uncanny, hand_reach.
 
-CRITICAL SYNC & PACING RULES:
-- Generate approximately {target_scenes} scenes so the visual cuts EVERY 2.2 to 3.2 seconds (fast-paced, never static!).
-- EVERY scene MUST have `"cue"`: the EXACT first 3 to 5 spoken words from `===SCRIPT===` where that scene begins (in exact chronological order, without [whisper]/[shout] tags). This locks video 100% to the voiceover!
-- NEVER use the same `"scene"` type twice in a row. Alternate wide room shots, close-up faces, object details, clocks, and text cards.
-- Include `"keywords"`: 15-25 single dramatic uppercase words from the script (like "ISN'T", "TEN", "SEVEN", "NEVER", "DARK", "WRONG", "KEEP", "REAL") that will flash red in the karaoke captions.
+STRICT SYNC & QUALITY RULES:
+- EVERY scene MUST have `"cue"`: the EXACT first 3 to 5 spoken words copied verbatim from `===SCRIPT===` where that visual begins (in strict chronological order, without [whisper]/[shout]).
+- Every `"custom_svg"` `"visual_brief"` MUST literally depict what the narrator is saying at that exact second (and vary camera angles: wide room -> close-up object -> close-up face -> detail shot, so NO two consecutive shots look similar!).
+- Only use valid `"sfx"` values: "sting", "tick", "creak", "click", "thud", "buzz", "beep" (or omit).
+- `"bubble"` must always be a short string (2-7 words) or omitted — NEVER a boolean!
+- Include `"keywords"`: 15-25 dramatic uppercase single words from YOUR script to highlight red in captions.
 
 OUTPUT FORMAT (STRICT — use these exact 3 markers):
 ===SCRIPT===
-<Full spoken script, short punchy sentences, ~{target_words} words, with [whisper] and [shout] tags where characters whisper or call out>
+<Full original spoken script, ~{target_words} words>
 ===STORYBOARD_JSON===
 {{
   "channel": "NIGHTORA",
-  "day": "TUESDAY",
+  "day": "FRIDAY",
   "file_num": "01",
-  "keywords": ["ISN'T", "SEVEN", "NEVER", "DON'T", "DARK", "REAL"],
-  "scenes": [
-    {{
-      "id": "s01",
-      "cue": "If you hear your mom",
-      "scene": "house_cutaway",
-      "rule_num": 0,
-      "clock": "9:14",
-      "bubble": "Dinner!",
-      "sfx": "buzz"
-    }}
-  ]
+  "keywords": ["DON'T", "NEVER", "SEVEN", "DARK", "WRONG"],
+  "scenes": [ ... ]
 }}
 ===PUBLISHING===
 <10 viral YouTube titles, SEO description, comma-separated tags, and 5 thumbnail prompts>
 """
 
     user_prompt = (
-        f"Topic / premise: {topic}\n"
-        f"Target length: {minutes} minutes (~{target_words} spoken words, ~{target_scenes} fast-paced scenes).\n"
+        f"USER TOPIC / TITLE: {topic}\n"
+        f"Target length: {minutes} minutes (~{target_words} spoken words, ~{target_scenes} fast-paced hybrid scenes).\n"
         f"Language: {lang_label}.\n"
-        f"Remember: every scene needs an exact chronological `cue` (3-5 words copied verbatim from ===SCRIPT===) and NO consecutive duplicate scene types."
+        f"Make every story beat a custom_svg with a vivid, literal visual_brief matching the exact spoken line."
     )
 
-    tried = []
-    candidates = list(dict.fromkeys(FALLBACK_MODELS))
-    last_err = None
-    raw = None
-
-    for model in candidates:
-        tried.append(model)
-        try:
-            raw = _call_gemini(model, system_prompt, user_prompt)
-            if "===SCRIPT===" in raw and "===STORYBOARD_JSON===" in raw:
-                break
-        except Exception as e:
-            last_err = e
-            continue
-
-    # If hardcoded models all failed (e.g. 404), auto-discover live models on this API key
-    if not raw or "===SCRIPT===" not in raw:
-        for model in _discover_text_models():
-            if model in tried:
-                continue
-            try:
-                raw = _call_gemini(model, system_prompt, user_prompt)
-                if "===SCRIPT===" in raw and "===STORYBOARD_JSON===" in raw:
-                    break
-            except Exception as e:
-                last_err = e
-                continue
-
-    if not raw or "===SCRIPT===" not in raw:
-        raise RuntimeError(f"Gemini generation failed: {last_err}")
+    raw = _call_with_fallback(system_prompt, user_prompt, temp=0.84)
+    if "===SCRIPT===" not in raw or "===STORYBOARD_JSON===" not in raw:
+        raise RuntimeError("Gemini response missing expected ===SCRIPT=== / ===STORYBOARD_JSON=== markers")
 
     m_sc = re.search(r"===SCRIPT===\s*(.*?)\s*===STORYBOARD_JSON===", raw, re.S)
     m_sb = re.search(r"===STORYBOARD_JSON===\s*(.*?)\s*===PUBLISHING===", raw, re.S)
@@ -263,5 +339,5 @@ OUTPUT FORMAT (STRICT — use these exact 3 markers):
     publishing_txt = m_pb.group(1).strip() if m_pb else ""
 
     storyboard = json.loads(sb_raw)
-    storyboard["scenes"] = _enforce_no_repeats(storyboard.get("scenes", []))
+    storyboard["scenes"] = _sanitize_and_hydrate_scenes(storyboard.get("scenes", []), topic)
     return script_txt, storyboard, publishing_txt
