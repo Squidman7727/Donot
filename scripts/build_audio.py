@@ -386,9 +386,9 @@ def align_storyboard(words: list, total_dur: float):
         if matched_idx is None:
             # Proportional monotonic fallback so a missed phrase never drifts
             frac = i / max(1, len(scenes))
-            matched_idx = max(cursor + 1, min(n_words - 1, int(frac * n_words)))
+            matched_idx = min(n_words - 1, max(cursor + 1, int(frac * n_words)))
 
-        cursor = max(cursor, matched_idx)
+        cursor = min(n_words - 1, max(cursor, matched_idx))
         sc["word_start"] = cursor
         sc["start_sec"] = round(float(words[cursor][0]), 3)
 
